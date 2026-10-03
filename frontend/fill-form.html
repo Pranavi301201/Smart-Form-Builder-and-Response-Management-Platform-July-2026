@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fill Form | Smart Form Builder</title>
+
+    <link rel="stylesheet"
+          href="css/fill-form.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+     TOP HEADER
+========================================== -->
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <span>Smart Forms</span>
+
+    </div>
+
+    <div class="secure">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Secure Form
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+     MAIN FORM
+========================================== -->
+
+<main class="form-wrapper">
+
+    <div class="form-card">
+
+        <!-- FORM HEADER -->
+
+        <div class="form-header">
+
+            <div class="form-icon">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </div>
+
+            <div>
+
+                <h1 id="formTitle">
+                    Loading Form...
+                </h1>
+
+                <p id="formDescription">
+                    Please wait while we load the form.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PUBLISHED STATUS -->
+
+        <div class="publish-status">
+
+            <span class="badge">
+
+                <i class="fa-solid fa-circle"></i>
+
+                Published
+
+            </span>
+
+        </div>
+
+
+        <!-- ==========================================
+             PUBLIC FORM
+        ========================================== -->
+
+        <form id="publicForm"
+              novalidate>
+
+            <div id="formFields"></div>
+
+
+            <!-- ==========================================
+                 FORM NAVIGATION
+            ========================================== -->
+
+            <div class="form-navigation">
+
+                <button
+                    type="button"
+                    id="backPageBtn"
+                    class="secondary-btn"
+                    style="display:none;">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="nextPageBtn"
+                    class="primary-btn"
+                    style="display:none;">
+
+                    Next
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="submitPageBtn"
+                    class="submit-btn"
+                    style="display:none;">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Submit Response
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<!-- ==========================================
+     LOADER
+========================================== -->
+
+<div id="loader"
+     class="loader">
+
+    <div class="spinner"></div>
+
+    <p>Loading Form...</p>
+
+</div>
+
+
+<!-- ==========================================
+     SUCCESS MODAL
+========================================== -->
+
+<div id="successModal"
+     class="modal">
+
+    <div class="modal-content">
+
+        <div class="success-circle">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+        <h2>
+            Response Submitted
+        </h2>
+
+        <p>
+            Thank you for filling out this form.
+            Your response has been recorded successfully.
+        </p>
+
+        <button
+            type="button"
+            id="closeModal"
+            class="modal-btn">
+
+            Done
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <p>
+
+        Powered by
+
+        <strong>
+            Smart Form Builder
+        </strong>
+
+    </p>
+
+</footer>
+
+
+<script src="js/fill-form.js"></script>
+
+</body>
+
+</html>

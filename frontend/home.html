@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Forms | Build Forms That Think</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="navbar" id="navbar">
+
+        <div class="nav-container">
+
+            <!-- Brand -->
+
+            <a href="#home" class="brand">
+
+                <div class="brand-mark">
+
+                    <span class="mark-layer layer-one"></span>
+                    <span class="mark-layer layer-two"></span>
+                    <span class="mark-layer layer-three"></span>
+
+                </div>
+
+                <div class="brand-name">
+
+                    <strong>Smart</strong>
+                    <span>Forms</span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="nav-menu">
+
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#builder" class="nav-link">
+                    Builder
+                </a>
+
+                <a href="#intelligence" class="nav-link">
+                    Intelligence
+                </a>
+
+                <a href="#workflow" class="nav-link">
+                    Workflow
+                </a>
+
+            </nav>
+
+
+            <!-- Actions -->
+            <div class="nav-actions">
+
+                <!-- Logged Out State (Auth Buttons) -->
+                <div class="auth-buttons" id="authButtons">
+
+                    <button
+                        class="login-btn"
+                        onclick="openLogin()">
+                        Log in
+                    </button>
+
+                    <button
+                        class="register-btn"
+                        onclick="openRegister()">
+                        Start building
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Logged In State (Dashboard Button + Profile Avatar) -->
+                <div class="user-profile-wrap" id="userProfileWrap" style="display: none;">
+
+                    <!-- Dashboard Button (Appears only when logged in) -->
+                    <a href="dashboard.html" class="dashboard-nav-btn" id="dashboardNavBtn">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        Dashboard
+                    </a>
+
+                    <!-- Profile Avatar & Dropdown -->
+                    <button
+                        class="profile-avatar-btn"
+                        id="profileAvatarBtn"
+                        onclick="toggleProfileDropdown()"
+                        aria-label="User Profile">
+                        <span id="userInitial">U</span>
+                    </button>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+
+                        <div class="profile-dropdown-header">
+                            <strong id="userName">User</strong>
+                            <small id="userEmail">user@example.com</small>
+                        </div>
+
+                        <div class="profile-dropdown-divider"></div>
+
+                        <a href="dashboard.html" class="profile-dropdown-item">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            Dashboard
+                        </a>
+
+                        <button
+                            class="profile-dropdown-item logout-btn"
+                            onclick="logout()">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Log out
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Mobile Button -->
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="#home">Home</a>
+            <a href="#builder">Builder</a>
+            <a href="#intelligence">Intelligence</a>
+            <a href="#workflow">Workflow</a>
+
+                        <!-- Mobile Logged Out Actions -->
+            <div class="mobile-actions" id="mobileAuthActions">
+
+                <button
+                    class="mobile-login"
+                    onclick="openLogin()">
+                    Log in
+                </button>
+
+                <button
+                    class="mobile-register"
+                    onclick="openRegister()">
+                    Start building
+                </button>
+
+            </div>
+
+
+            <!-- Mobile Logged In Actions -->
+            <div class="mobile-profile-actions" id="mobileProfileActions" style="display: none;">
+
+                <a href="dashboard.html" class="mobile-dashboard-btn">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Go to Dashboard
+                </a>
+
+                <button class="mobile-logout-btn" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Log out
+                </button>
+
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-noise"></div>
+
+            <div class="hero-orb orb-one"></div>
+            <div class="hero-orb orb-two"></div>
+
+
+            <div class="hero-container">
+
+
+                <!-- HERO LEFT -->
+
+                <div class="hero-content">
+
+                    <div class="hero-eyebrow">
+
+                        <span class="pulse-dot"></span>
+
+                        <span>THE NEXT WAY TO BUILD FORMS</span>
+
+                    </div>
+
+
+                    <h1>
+
+                        Forms that do more than
+
+                        <span class="gradient-text">
+                            collect answers.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Build intelligent forms that adapt to every response,
+                        guide users naturally, and turn raw answers into
+                        meaningful insights.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <button
+                            class="hero-primary"
+                            onclick="openRegister()">
+
+                            <span>Build your first form</span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <a
+                            href="#builder"
+                            class="hero-secondary">
+
+                            <span class="secondary-icon">
+
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            </span>
+
+                            Explore the builder
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Mini Stats -->
+
+                    <div class="hero-proof">
+
+                        <div class="proof-item">
+
+                            <strong>01</strong>
+
+                            <span>
+                                Platform
+                                <small>Everything in one place</small>
+                            </span>
+
+                        </div>
+
+
+                        <div class="proof-line"></div>
+
+
+                        <div class="proof-item">
+
+                            <strong>∞</strong>
+
+                            <span>
+                                Possibilities
+                                <small>Build your way</small>
+                            </span>
+
+                        </div>
+
+
+                        <div class="proof-line"></div>
+
+
+                        <div class="proof-item">
+
+                            <strong>100%</strong>
+
+                            <span>
+                                Responsive
+                                <small>Every screen, every device</small>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HERO RIGHT : LIVE BUILDER -->
+
+                <div class="hero-builder-wrap">
+
+
+                    <div class="builder-glow"></div>
+
+
+                    <!-- Builder Window -->
+
+                    <div class="live-builder">
+
+
+                        <!-- Window Top -->
+
+                        <div class="builder-topbar">
+
+                            <div class="window-dots">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="builder-file">
+
+                                <i class="fa-regular fa-file-lines"></i>
+
+                                <span>customer-feedback</span>
+
+                                <span class="saved-status">
+
+                                    <i class="fa-solid fa-cloud"></i>
+
+                                    Saved
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="builder-avatar">
+                                P
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Builder Workspace -->
+
+                        <div class="builder-workspace">
+
+
+                            <!-- Builder Sidebar -->
+
+                            <aside class="builder-sidebar">
+
+                                <div class="sidebar-head">
+
+                                    <span>ADD BLOCK</span>
+
+                                </div>
+
+
+                                <div class="field-library">
+
+                                    <div class="field-tool">
+
+                                        <span class="tool-icon">
+
+                                            <i class="fa-solid fa-font"></i>
+
+                                        </span>
+
+                                        <span>Text</span>
+
+                                    </div>
+
+
+                                    <div class="field-tool">
+
+                                        <span class="tool-icon">
+
+                                            <i class="fa-solid fa-envelope"></i>
+
+                                        </span>
+
+                                        <span>Email</span>
+
+                                    </div>
+
+
+                                    <div class="field-tool active-tool">
+
+                                        <span class="tool-icon">
+
+                                            <i class="fa-solid fa-list"></i>
+
+                                        </span>
+
+                                        <span>Choice</span>
+
+                                    </div>
+
+
+                                    <div class="field-tool">
+
+                                        <span class="tool-icon">
+
+                                            <i class="fa-regular fa-calendar"></i>
+
+                                        </span>
+
+                                        <span>Date</span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="sidebar-bottom">
+
+                                    <span class="logic-icon">
+
+                                        <i class="fa-solid fa-code-branch"></i>
+
+                                    </span>
+
+                                    <span>Logic</span>
+
+                                </div>
+
+                            </aside>
+
+
+
+                            <!-- Form Canvas -->
+
+                            <section class="form-canvas">
+
+
+                                <div class="canvas-top">
+
+                                    <div>
+
+                                        <span class="canvas-label">
+                                            LIVE FORM
+                                        </span>
+
+                                        <h3>
+                                            Customer Feedback
+                                        </h3>
+
+                                    </div>
+
+
+                                    <button class="canvas-more">
+
+                                        <i class="fa-solid fa-ellipsis"></i>
+
+                                    </button>
+
+                                </div>
+
+
+                                <!-- Form Block 1 -->
+
+                                <div
+                                    class="form-block block-name"
+                                    data-builder-block>
+
+                                    <div class="block-handle">
+
+                                        <i class="fa-solid fa-grip-vertical"></i>
+
+                                    </div>
+
+
+                                    <div class="block-content">
+
+                                        <label>
+
+                                            What should we call you?
+
+                                            <span>*</span>
+
+                                        </label>
+
+
+                                        <div class="fake-input">
+
+                                            <span>
+                                                Enter your name
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Form Block 2 -->
+
+                                <div
+                                    class="form-block block-email"
+                                    data-builder-block>
+
+                                    <div class="block-handle">
+
+                                        <i class="fa-solid fa-grip-vertical"></i>
+
+                                    </div>
+
+
+                                    <div class="block-content">
+
+                                        <label>
+
+                                            Your email address
+
+                                            <span>*</span>
+
+                                        </label>
+
+
+                                        <div class="fake-input">
+
+                                            <span>
+                                                you@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Form Block 3 -->
+
+                                <div
+                                    class="form-block selected-block"
+                                    data-builder-block>
+
+                                    <div class="block-handle">
+
+                                        <i class="fa-solid fa-grip-vertical"></i>
+
+                                    </div>
+
+
+                                    <div class="block-content">
+
+                                        <label>
+
+                                            How was your experience?
+
+                                        </label>
+
+
+                                        <div class="choice-row">
+
+                                            <button class="choice-chip">
+                                                😞
+                                            </button>
+
+                                            <button class="choice-chip">
+                                                😐
+                                            </button>
+
+                                            <button class="choice-chip selected">
+                                                😊
+                                            </button>
+
+                                            <button class="choice-chip">
+                                                🤩
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="block-selected-dot"></div>
+
+                                </div>
+
+
+                                <!-- Add Block -->
+
+                                <button
+                                    class="add-block-btn"
+                                    id="demoAddField">
+
+                                    <i class="fa-solid fa-plus"></i>
+
+                                    Add another field
+
+                                </button>
+
+                            </section>
+
+
+
+                            <!-- Builder Properties -->
+
+                            <aside class="builder-properties">
+
+                                <div class="properties-head">
+
+                                    <span>FIELD SETTINGS</span>
+
+                                    <i class="fa-solid fa-sliders"></i>
+
+                                </div>
+
+
+                                <div class="property-group">
+
+                                    <label>
+                                        Label
+                                    </label>
+
+                                    <div class="property-input">
+                                        How was your experience?
+                                    </div>
+
+                                </div>
+
+
+                                <div class="property-group">
+
+                                    <label>
+                                        TYPE
+                                    </label>
+
+                                    <div class="select-preview">
+
+                                        Rating
+
+                                        <i class="fa-solid fa-chevron-down"></i>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="property-switch">
+
+                                    <span>Required field</span>
+
+                                    <div class="switch-on">
+
+                                        <span></span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="property-switch">
+
+                                    <span>Smart logic</span>
+
+                                    <div class="switch-on">
+
+                                        <span></span>
+
+                                    </div>
+
+                                </div>
+
+                            </aside>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Floating Intelligence Card -->
+
+                    <div class="floating-ai-card">
+
+                        <div class="ai-card-icon">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>SMART SUGGESTION</span>
+
+                            <strong>
+                                Add follow-up question
+                            </strong>
+
+                        </div>
+
+
+                        <button id="acceptSuggestion">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Floating Response Card -->
+
+                    <div class="floating-response-card">
+
+                        <div class="response-ring">
+
+                            <span>84%</span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>COMPLETION RATE</span>
+
+                            <strong>
+                                Looking good
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Bottom -->
+
+            <div class="hero-scroll-indicator">
+
+                <span>SCROLL TO EXPLORE</span>
+
+                <div class="scroll-line">
+
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+<!-- =================================================
+     CREATE WITH AI
+================================================== -->
+
+<section class="ai-create-section" id="create-ai">
+
+    <div class="ai-container">
+
+        <!-- AI Badge -->
+
+        <div class="ai-badge">
+
+            <span class="ai-badge-icon">
+                ✦
+            </span>
+
+            CREATE WITH AI
+
+        </div>
+
+
+        <!-- Heading -->
+
+        <h2>
+
+            Describe your form.
+
+            <span>
+                We'll build it for you.
+            </span>
+
+        </h2>
+
+
+        <p class="ai-description">
+
+            Tell Smart Forms what you want to collect,
+            who it's for, and what you need to know.
+            Our AI turns your idea into a complete,
+            ready-to-customize form in seconds.
+
+        </p>
+
+
+        <!-- AI Generator Card -->
+
+        <div class="ai-card">
+
+
+            <!-- Card Header -->
+
+            <div class="ai-card-header">
+
+                <div class="ai-card-icon">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        What would you like to build?
+                    </h3>
+
+                    <p>
+                        Describe your form in your own words.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Prompt -->
+
+            <div class="ai-input-box">
+
+                <textarea
+                    id="aiFormPrompt"
+                    maxlength="1000"
+                    placeholder="Example: Create a customer feedback form for a restaurant. Ask for their name, email, overall experience, what they liked most, and suggestions for improvement."
+                ></textarea>
+
+
+                <div class="ai-input-footer">
+
+                    <span class="ai-character-count">
+                        0 / 1000
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="ai-generate-btn">
+
+                        <span>✦</span>
+
+                        Generate Form
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Example Prompts -->
+
+            <div class="ai-examples">
+
+                <span class="ai-examples-label">
+                    Try an example:
+                </span>
+
+
+                <button
+                    type="button"
+                    class="ai-example-btn"
+                    data-prompt="Create a customer feedback form for a restaurant. Ask for name, email, overall experience, favorite part of the meal, and suggestions for improvement.">
+
+                    Customer feedback
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="ai-example-btn"
+                    data-prompt="Create an employee satisfaction survey with questions about workplace culture, management, workload, communication, and suggestions for improvement.">
+
+                    Employee survey
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="ai-example-btn"
+                    data-prompt="Create an event registration form asking for attendee name, email, phone number, organization, attendance type, dietary requirements, and special requests.">
+
+                    Event registration
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="ai-example-btn"
+                    data-prompt="Create a job application form with personal details, education, work experience, skills, resume upload, availability, and a short introduction.">
+
+                    Job application
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- AI Features -->
+
+        <div class="ai-features">
+
+
+            <div class="ai-feature">
+
+                <div class="ai-feature-icon">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Built in seconds
+                    </h4>
+
+                    <p>
+                        Turn a simple description into
+                        a structured form instantly.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="ai-feature">
+
+                <div class="ai-feature-icon">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Fully customizable
+                    </h4>
+
+                    <p>
+                        Edit questions, fields, logic,
+                        and design after generation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="ai-feature">
+
+                <div class="ai-feature-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Smart by default
+                    </h4>
+
+                    <p>
+                        AI suggests relevant questions
+                        and natural form flows.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     AI GENERATION MODAL
+================================================== -->
+
+<div
+    class="ai-modal hidden"
+    id="aiGenerationModal">
+
+    <div class="ai-modal-card">
+
+        <div class="ai-loading-icon">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+        </div>
+
+
+        <h3>
+            Building your form...
+        </h3>
+
+
+        <p>
+            Smart Forms AI is turning your description
+            into a structured form.
+        </p>
+
+
+        <div class="ai-progress">
+
+            <div class="ai-progress-bar"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- =================================================
+             BUILDER EXPERIENCE
+        ================================================== -->
+
+        <section
+            class="builder-section"
+            id="builder">
+
+
+            <div class="section-container">
+
+
+                <div class="builder-intro">
+
+                    <div class="section-kicker">
+
+                        <span>01</span>
+
+                        THE BUILDER
+
+                    </div>
+
+
+                    <h2>
+
+                        Stop designing forms.
+
+                        <span>Start composing experiences.</span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <!-- Builder Story -->
+
+                <div class="builder-story">
+
+
+                    <!-- Left Navigation -->
+
+                    <div class="story-steps">
+
+                        <button
+                            class="story-step active"
+                            data-story="0">
+
+                            <span>01</span>
+
+                            <div>
+
+                                <strong>Choose</strong>
+
+                                <small>
+                                    Pick the building blocks
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                        <button
+                            class="story-step"
+                            data-story="1">
+
+                            <span>02</span>
+
+                            <div>
+
+                                <strong>Arrange</strong>
+
+                                <small>
+                                    Shape your perfect flow
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                        <button
+                            class="story-step"
+                            data-story="2">
+
+                            <span>03</span>
+
+                            <div>
+
+                                <strong>Customize</strong>
+
+                                <small>
+                                    Make every detail yours
+                                </small>
+
+                            </div>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Visual -->
+
+                    <div class="story-visual">
+
+
+                        <div class="story-visual-top">
+
+                            <span class="story-status">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                BUILDER MODE
+
+                            </span>
+
+
+                            <span id="storyCount">
+                                01 / 03
+                            </span>
+
+                        </div>
+
+
+                        <div class="story-stage" id="storyStage">
+
+
+                            <!-- Stage Content 1 -->
+
+                            <div
+                                class="story-panel active-panel"
+                                data-panel="0">
+
+                                <div class="stage-toolbar">
+
+                                    <div class="toolbar-item active">
+                                        <i class="fa-solid fa-font"></i>
+                                        Short text
+                                    </div>
+
+                                    <div class="toolbar-item">
+                                        <i class="fa-solid fa-list"></i>
+                                        Choice
+                                    </div>
+
+                                    <div class="toolbar-item">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        Date
+                                    </div>
+
+                                </div>
+
+
+                                <div class="stage-form-preview">
+
+                                    <span class="stage-tag">
+                                        FORM BLOCKS
+                                    </span>
+
+
+                                    <div class="stage-question">
+
+                                        <div class="question-number">
+                                            01
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Tell us about yourself
+                                            </strong>
+
+                                            <div class="stage-input-line"></div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="stage-question">
+
+                                        <div class="question-number">
+                                            02
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                What brings you here?
+                                            </strong>
+
+                                            <div class="stage-chips">
+
+                                                <span>Feedback</span>
+                                                <span>Support</span>
+                                                <span>Other</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Stage Content 2 -->
+
+                            <div
+                                class="story-panel"
+                                data-panel="1">
+
+                                <div class="arrange-demo">
+
+                                    <div class="arrange-card card-a">
+
+                                        <span>
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                        </span>
+
+                                        Full Name
+
+                                    </div>
+
+
+                                    <div class="arrange-arrow">
+
+                                        <i class="fa-solid fa-arrow-down"></i>
+
+                                    </div>
+
+
+                                    <div class="arrange-card card-b">
+
+                                        <span>
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                        </span>
+
+                                        Email Address
+
+                                    </div>
+
+
+                                    <div class="arrange-arrow">
+
+                                        <i class="fa-solid fa-arrow-down"></i>
+
+                                    </div>
+
+
+                                    <div class="arrange-card card-c">
+
+                                        <span>
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                        </span>
+
+                                        Your Question
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="arrange-note">
+
+                                    <i class="fa-solid fa-arrows-up-down"></i>
+
+                                    Drag. Drop. Rearrange.
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Stage Content 3 -->
+
+                            <div
+                                class="story-panel"
+                                data-panel="2">
+
+                                <div class="customize-layout">
+
+                                    <div class="customize-preview">
+
+                                        <div class="preview-question-title">
+
+                                            Customer Satisfaction
+
+                                            <span>*</span>
+
+                                        </div>
+
+                                        <div class="preview-rating">
+
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span class="selected">3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="customize-controls">
+
+                                        <div>
+
+                                            <span>Required</span>
+
+                                            <div class="mini-toggle on"></div>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <span>Theme</span>
+
+                                            <div class="theme-dots">
+
+                                                <i></i>
+                                                <i></i>
+                                                <i></i>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <span>Layout</span>
+
+                                            <i class="fa-solid fa-table-columns"></i>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INTELLIGENCE SECTION
+        ================================================== -->
+
+        <section
+            class="intelligence-section"
+            id="intelligence">
+
+
+            <div class="intelligence-bg-grid"></div>
+
+
+            <div class="section-container intelligence-container">
+
+
+                <div class="intelligence-content">
+
+                    <div class="section-kicker light-kicker">
+
+                        <span>02</span>
+
+                        SMART INTELLIGENCE
+
+                    </div>
+
+
+                    <h2>
+
+                        One form.
+
+                        <span>
+                            A different journey
+                            for every person.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Smart conditional logic lets your forms respond
+                        to users in real time. Ask only what matters.
+                        Hide what doesn't. Create natural conversations.
+
+                    </p>
+
+
+                    <div class="logic-benefits">
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Show relevant questions
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Reduce unnecessary fields
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Create personalized flows
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="logic-demo-btn"
+                        id="runLogicDemo">
+
+                        Run live example
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Logic Visual -->
+
+                <div class="logic-machine">
+
+
+                    <div class="logic-machine-head">
+
+                        <div>
+
+                            <span>CONDITIONAL FLOW</span>
+
+                            <strong>
+                                Customer experience
+                            </strong>
+
+                        </div>
+
+
+                        <span class="logic-live">
+
+                            <i></i>
+
+                            LIVE
+
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="logic-flow">
+
+
+                        <!-- IF -->
+
+                        <div class="logic-node if-node">
+
+                            <span class="node-type">
+                                IF
+                            </span>
+
+                            <strong>
+                                Experience =
+                            </strong>
+
+                            <div class="node-value">
+
+                                😊 Good
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="logic-connector">
+
+                            <span></span>
+
+                            <i class="fa-solid fa-arrow-down"></i>
+
+                        </div>
+
+
+                        <!-- THEN -->
+
+                        <div class="logic-node then-node">
+
+                            <span class="node-type">
+                                THEN
+                            </span>
+
+                            <strong>
+                                Action
+                            </strong>
+
+                            <div class="node-value">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                                Show question
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="logic-connector">
+
+                            <span></span>
+
+                            <i class="fa-solid fa-arrow-down"></i>
+
+                        </div>
+
+
+                        <!-- RESULT -->
+
+                        <div class="logic-result">
+
+                            <div class="result-icon">
+
+                                <i class="fa-solid fa-message"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>NEW QUESTION</span>
+
+                                <strong>
+                                    What did you enjoy most?
+                                </strong>
+
+                            </div>
+
+
+                            <i class="fa-solid fa-sparkles result-sparkle"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESPONSE PULSE
+        ================================================== -->
+
+        <section class="pulse-section">
+
+
+            <div class="section-container">
+
+
+                <div class="pulse-header">
+
+                    <div>
+
+                        <div class="section-kicker">
+
+                            <span>03</span>
+
+                            RESPONSE PULSE
+
+                        </div>
+
+
+                        <h2>
+
+                            Every response
+
+                            <span>
+                                tells you something.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        See what is happening with your forms and
+                        turn responses into clear, useful information.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="pulse-dashboard">
+
+
+                    <!-- Main Chart -->
+
+                    <div class="pulse-main-chart">
+
+                        <div class="chart-head">
+
+                            <div>
+
+                                <span>RESPONSE ACTIVITY</span>
+
+                                <strong>1,284</strong>
+
+                                <small>
+                                    <i class="fa-solid fa-arrow-up"></i>
+                                    28.4% this week
+                                </small>
+
+                            </div>
+
+
+                            <button>
+
+                                Last 7 days
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+                            <div class="chart-grid-line line-1"></div>
+                            <div class="chart-grid-line line-2"></div>
+                            <div class="chart-grid-line line-3"></div>
+
+
+                            <svg
+                                viewBox="0 0 700 260"
+                                preserveAspectRatio="none">
+
+                                <defs>
+
+                                    <linearGradient
+                                        id="chartGradient"
+                                        x1="0"
+                                        y1="0"
+                                        x2="0"
+                                        y2="1">
+
+                                        <stop
+                                            offset="0%"
+                                            stop-color="rgba(59, 130, 246, .25)" />
+
+                                        <stop
+                                            offset="100%"
+                                            stop-color="rgba(59, 130, 246, 0)" />
+
+                                    </linearGradient>
+
+                                </defs>
+
+
+                                <path
+                                    class="chart-fill"
+                                    d="M0,210
+                                       C40,190 55,180 90,188
+                                       C130,198 150,135 190,155
+                                       C225,172 245,110 285,125
+                                       C330,142 350,75 395,95
+                                       C440,115 465,60 510,78
+                                       C555,95 580,32 625,55
+                                       C650,65 675,40 700,22
+                                       L700,260
+                                       L0,260 Z">
+
+                                </path>
+
+
+                                <path
+                                    class="chart-line"
+                                    d="M0,210
+                                       C40,190 55,180 90,188
+                                       C130,198 150,135 190,155
+                                       C225,172 245,110 285,125
+                                       C330,142 350,75 395,95
+                                       C440,115 465,60 510,78
+                                       C555,95 580,32 625,55
+                                       C650,65 675,40 700,22">
+
+                                </path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="chart-days">
+
+                            <span>MON</span>
+                            <span>TUE</span>
+                            <span>WED</span>
+                            <span>THU</span>
+                            <span>FRI</span>
+                            <span>SAT</span>
+                            <span>SUN</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Response Feed -->
+
+                    <div class="response-feed">
+
+                        <div class="feed-head">
+
+                            <span>LIVE ACTIVITY</span>
+
+                            <span class="feed-live">
+
+                                <i></i>
+
+                                LIVE
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-avatar a1">
+                                    R
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        New response received
+                                    </strong>
+
+                                    <small>
+                                        Customer Feedback · now
+                                    </small>
+
+                                </div>
+
+                                <i class="fa-solid fa-arrow-up-right"></i>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-avatar a2">
+                                    S
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Survey completed
+                                    </strong>
+
+                                    <small>
+                                        Product Research · 2m
+                                    </small>
+
+                                </div>
+
+                                <i class="fa-solid fa-arrow-up-right"></i>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-avatar a3">
+                                    A
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Form published
+                                    </strong>
+
+                                    <small>
+                                        Event Registration · 8m
+                                    </small>
+
+                                </div>
+
+                                <i class="fa-solid fa-arrow-up-right"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="view-all-btn">
+
+                            View all responses
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WORKFLOW
+        ================================================== -->
+
+        <section
+            class="workflow-section"
+            id="workflow">
+
+
+            <div class="section-container">
+
+
+                <div class="workflow-top">
+
+                    <div class="section-kicker">
+
+                        <span>04</span>
+
+                        THE WORKFLOW
+
+                    </div>
+
+
+                    <h2>
+
+                        From blank page
+
+                        <span>
+                            to better decisions.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="workflow-track">
+
+
+                    <div class="workflow-line"></div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            01
+                        </div>
+
+                        <div class="workflow-icon">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </div>
+
+                        <h3>
+                            Create
+                        </h3>
+
+                        <p>
+                            Start from scratch and build your form.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            02
+                        </div>
+
+                        <div class="workflow-icon">
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                        </div>
+
+                        <h3>
+                            Adapt
+                        </h3>
+
+                        <p>
+                            Add logic that responds to every answer.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            03
+                        </div>
+
+                        <div class="workflow-icon">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </div>
+
+                        <h3>
+                            Share
+                        </h3>
+
+                        <p>
+                            Send your form wherever your audience is.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            04
+                        </div>
+
+                        <div class="workflow-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+                            Turn responses into useful insights.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="final-cta-section">
+
+
+            <div class="cta-orb cta-orb-one"></div>
+            <div class="cta-orb cta-orb-two"></div>
+
+
+            <div class="final-cta-content">
+
+
+                <div class="cta-mini-brand">
+
+                    <div class="brand-mark">
+
+                        <span class="mark-layer layer-one"></span>
+                        <span class="mark-layer layer-two"></span>
+                        <span class="mark-layer layer-three"></span>
+
+                    </div>
+
+                    SMART FORMS
+
+                </div>
+
+
+                <h2>
+
+                    Your next form can be
+
+                    <span>
+                        much smarter.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Build it your way. Make it intelligent.
+                    Start collecting better answers today.
+
+                </p>
+
+
+                <div class="cta-actions">
+
+                    <button
+                        class="cta-primary"
+                        onclick="openRegister()">
+
+                        Start building free
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <button
+                        class="cta-login"
+                        onclick="openLogin()">
+
+                        I already have an account
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-main">
+
+                <a href="#home" class="brand">
+
+                    <div class="brand-mark">
+
+                        <span class="mark-layer layer-one"></span>
+                        <span class="mark-layer layer-two"></span>
+                        <span class="mark-layer layer-three"></span>
+
+                    </div>
+
+                    <div class="brand-name">
+
+                        <strong>Smart</strong>
+                        <span>Forms</span>
+
+                    </div>
+
+                </a>
+
+
+                <p>
+
+                    Intelligent forms for better conversations,
+                    better responses and better decisions.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <span>PRODUCT</span>
+
+                    <a href="#builder">
+                        Builder
+                    </a>
+
+                    <a href="#intelligence">
+                        Smart Logic
+                    </a>
+
+                    <a href="#workflow">
+                        Workflow
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <span>ACCOUNT</span>
+
+                    <a
+                        href="#"
+                        onclick="openLogin(); return false;">
+
+                        Log in
+                    </a>
+
+                    <a
+                        href="#"
+                        onclick="openRegister(); return false;">
+
+                        Create account
+                    </a>
+
+                    <a href="#home">
+                        Back to top
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <span>CONNECT</span>
+
+                    <a href="#">
+                        Support
+                    </a>
+
+                    <a href="#">
+                        Documentation
+                    </a>
+
+                    <a href="#">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Smart Forms. Built for smarter data.
+            </span>
+
+
+            <div>
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         REGISTER MODAL
+    ====================================================== -->
+
+    <div class="modal" id="registerModal">
+
+        <div class="modal-overlay"></div>
+
+
+        <div class="modal-content">
+
+
+            <button
+                class="modal-close"
+                onclick="closeRegister()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-brand-icon">
+
+                <div class="brand-mark">
+
+                    <span class="mark-layer layer-one"></span>
+                    <span class="mark-layer layer-two"></span>
+                    <span class="mark-layer layer-three"></span>
+
+                </div>
+
+            </div>
+
+
+            <span class="modal-kicker">
+                CREATE YOUR WORKSPACE
+            </span>
+
+
+            <h2>
+                Start building smarter.
+            </h2>
+
+
+            <p class="modal-subtitle">
+                Create your account and start building intelligent forms.
+            </p>
+
+
+            <div class="input-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name">
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com">
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password">
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Confirm Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password">
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Account Type
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-user-tag"></i>
+
+                    <select id="role">
+
+                        <option value="User">
+                            User
+                        </option>
+
+                        <option value="Admin">
+                            Admin
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+    type="button"
+    class="modal-submit"
+    onclick="register()">
+
+    Create Account
+
+    <i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+<div class="auth-divider">
+    <span>OR CONTINUE WITH</span>
+</div>
+
+<button
+    type="button"
+    class="google-auth-btn"
+    onclick="signInWithGoogle()">
+
+    <span class="google-g">G</span>
+
+    <span>Continue with Google</span>
+
+</button>
+
+
+            <p
+                id="message"
+                class="form-message">
+            </p>
+
+
+            <div class="modal-footer-text">
+
+                Already have an account?
+
+                <a
+                    href="#"
+                    onclick="switchToLogin(); return false;">
+
+                    Log in
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         LOGIN MODAL
+    ====================================================== -->
+
+    <div class="modal" id="loginModal">
+
+        <div class="modal-overlay"></div>
+
+
+        <div class="modal-content">
+
+
+            <button
+                class="modal-close"
+                onclick="closeLogin()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-brand-icon">
+
+                <div class="brand-mark">
+
+                    <span class="mark-layer layer-one"></span>
+                    <span class="mark-layer layer-two"></span>
+                    <span class="mark-layer layer-three"></span>
+
+                </div>
+
+            </div>
+
+
+            <span class="modal-kicker">
+                WELCOME BACK
+            </span>
+
+
+            <h2>
+                Continue building.
+            </h2>
+
+
+            <p class="modal-subtitle">
+                Log in to access your Smart Forms workspace.
+            </p>
+
+
+            <div class="input-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="you@example.com">
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password">
+
+                </div>
+
+            </div>
+
+
+            <button
+    type="button"
+    class="modal-submit"
+    onclick="login()">
+
+    Login
+
+    <i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+<div class="auth-divider">
+    <span>OR CONTINUE WITH</span>
+</div>
+
+<button
+    type="button"
+    class="google-auth-btn"
+    onclick="signInWithGoogle()">
+
+    <span class="google-g">G</span>
+
+    <span>Continue with Google</span>
+
+</button>
+
+
+            <p
+                id="loginMessage"
+                class="form-message">
+            </p>
+
+
+            <div class="modal-footer-text">
+
+                New to Smart Forms?
+
+                <a
+                    href="#"
+                    onclick="switchToRegister(); return false;">
+
+                    Create an account
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+   <!-- Google Identity Services -->
+<script
+    src="https://accounts.google.com/gsi/client"
+    async
+    defer>
+</script>
+
+<!-- Home JS -->
+<script src="js/home.js"></script>
+
+</body>
+
+</html>

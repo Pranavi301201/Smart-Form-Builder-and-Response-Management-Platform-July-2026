@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Templates | Smart Form Builder</title>
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="css/templates.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<!-- ==========================================
+     SIDEBAR
+========================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <h2>Smart Forms</h2>
+
+    </div>
+
+
+    <ul class="menu">
+
+        <li>
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="myforms.html">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                My Forms
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="create-form.html">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Create Form
+
+            </a>
+        </li>
+
+
+        <!-- ACTIVE -->
+
+        <li class="active">
+
+            <a href="templates.html">
+
+                <i class="fa-solid fa-copy"></i>
+
+                Templates
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#">
+
+                <i class="fa-solid fa-palette"></i>
+
+                Themes
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="analytics.html">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                Analytics
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="responses.html">
+
+                <i class="fa-solid fa-square-poll-horizontal"></i>
+
+                Responses
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#">
+
+                <i class="fa-solid fa-share-nodes"></i>
+
+                Shared Forms
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Trash
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#">
+
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+
+            </a>
+
+        </li>
+
+
+        <li class="logout">
+
+            <a href="login.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</aside>
+
+
+
+<!-- ==========================================
+     MAIN CONTENT
+========================================== -->
+
+<div class="main-content">
+
+
+    <!-- ======================================
+         PAGE HEADER
+    ======================================= -->
+
+    <div class="templates-header">
+
+        <div>
+
+            <h1>Form Templates</h1>
+
+            <p>
+                Start quickly with a professionally designed
+                form template.
+            </p>
+
+        </div>
+
+
+        <a href="create-form.html"
+           class="create-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Create Blank Form
+
+        </a>
+
+    </div>
+
+
+
+    <!-- ======================================
+         TEMPLATE SEARCH / FILTER
+    ======================================= -->
+
+    <div class="template-tools">
+
+        <div class="template-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="templateSearch"
+                placeholder="Search templates...">
+
+        </div>
+
+
+        <div class="template-category">
+
+            <button class="category-btn active">
+                All
+            </button>
+
+            <button class="category-btn">
+                Education
+            </button>
+
+            <button class="category-btn">
+                Business
+            </button>
+
+            <button class="category-btn">
+                Healthcare
+            </button>
+
+            <button class="category-btn">
+                Feedback
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ======================================
+         TEMPLATE SECTION
+    ======================================= -->
+
+    <section class="templates-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>Choose a Template</h2>
+
+                <p>
+                    Select a template and customize it
+                    according to your requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             TEMPLATE GRID
+        =================================== -->
+
+        <div class="template-grid"
+             id="templateGrid">
+
+
+            <!-- ==============================
+                 STUDENT TEMPLATE
+            =============================== -->
+
+            <div class="template-card"
+                 data-category="Education"
+                 data-name="Student Details Form">
+
+                <div class="template-preview student-preview">
+
+                    <div class="preview-icon">
+
+                        <i class="fa-solid fa-user-graduate"></i>
+
+                    </div>
+
+                    <div class="preview-lines">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="template-content">
+
+                    <div class="template-title-row">
+
+                        <h3>
+                            Student Details
+                        </h3>
+
+                        <span class="template-tag education">
+                            Education
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Collect student information such as
+                        name, branch, roll number, email and
+                        academic details.
+                    </p>
+
+
+                    <div class="template-info">
+
+                        <span>
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            Multiple fields
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                            Conditional logic
+
+                        </span>
+
+                    </div>
+
+
+                    <button class="use-template-btn"
+                            data-template="student">
+
+                        Use Template
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 RESTAURANT TEMPLATE
+            =============================== -->
+
+            <div class="template-card"
+                 data-category="Business"
+                 data-name="Restaurant Order Form">
+
+                <div class="template-preview restaurant-preview">
+
+                    <div class="preview-icon">
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                    </div>
+
+                    <div class="preview-lines">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="template-content">
+
+                    <div class="template-title-row">
+
+                        <h3>
+                            Restaurant Order
+                        </h3>
+
+                        <span class="template-tag business">
+                            Business
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Create an order form for restaurants
+                        with customer details, food selection,
+                        quantity and preferences.
+                    </p>
+
+
+                    <div class="template-info">
+
+                        <span>
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            Multiple fields
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                            Conditional logic
+
+                        </span>
+
+                    </div>
+
+
+                    <button class="use-template-btn"
+                            data-template="restaurant">
+
+                        Use Template
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 HOSPITAL TEMPLATE
+            =============================== -->
+
+            <div class="template-card"
+                 data-category="Healthcare"
+                 data-name="Hospital Patient Form">
+
+                <div class="template-preview hospital-preview">
+
+                    <div class="preview-icon">
+
+                        <i class="fa-solid fa-hospital"></i>
+
+                    </div>
+
+                    <div class="preview-lines">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="template-content">
+
+                    <div class="template-title-row">
+
+                        <h3>
+                            Hospital Patient Form
+                        </h3>
+
+                        <span class="template-tag healthcare">
+                            Healthcare
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Collect patient information including
+                        personal details, symptoms, appointment
+                        information and medical preferences.
+                    </p>
+
+
+                    <div class="template-info">
+
+                        <span>
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            Multiple fields
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                            Conditional logic
+
+                        </span>
+
+                    </div>
+
+
+                    <button class="use-template-btn"
+                            data-template="hospital">
+
+                        Use Template
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 EMPLOYEE TEMPLATE
+            =============================== -->
+
+            <div class="template-card"
+                 data-category="Business"
+                 data-name="Employee Details Form">
+
+                <div class="template-preview employee-preview">
+
+                    <div class="preview-icon">
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                    </div>
+
+                    <div class="preview-lines">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="template-content">
+
+                    <div class="template-title-row">
+
+                        <h3>
+                            Employee Details
+                        </h3>
+
+                        <span class="template-tag business">
+                            Business
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Collect employee information such as
+                        name, department, contact details and
+                        employment information.
+                    </p>
+
+
+                    <div class="template-info">
+
+                        <span>
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            Multiple fields
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                            Conditional logic
+
+                        </span>
+
+                    </div>
+
+
+                    <button class="use-template-btn"
+                            data-template="employee">
+
+                        Use Template
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 EVENT TEMPLATE
+            =============================== -->
+
+            <div class="template-card"
+                 data-category="Business"
+                 data-name="Event Registration Form">
+
+                <div class="template-preview event-preview">
+
+                    <div class="preview-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div class="preview-lines">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="template-content">
+
+                    <div class="template-title-row">
+
+                        <h3>
+                            Event Registration
+                        </h3>
+
+                        <span class="template-tag business">
+                            Business
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Register participants for events with
+                        contact details, attendance preferences,
+                        session selection and requirements.
+                    </p>
+
+
+                    <div class="template-info">
+
+                        <span>
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            Multiple fields
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                            Conditional logic
+
+                        </span>
+
+                    </div>
+
+
+                    <button class="use-template-btn"
+                            data-template="event">
+
+                        Use Template
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 FEEDBACK TEMPLATE
+            =============================== -->
+
+            <div class="template-card"
+                 data-category="Feedback"
+                 data-name="Customer Feedback Form">
+
+                <div class="template-preview feedback-preview">
+
+                    <div class="preview-icon">
+
+                        <i class="fa-solid fa-comment-dots"></i>
+
+                    </div>
+
+                    <div class="preview-lines">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="template-content">
+
+                    <div class="template-title-row">
+
+                        <h3>
+                            Customer Feedback
+                        </h3>
+
+                        <span class="template-tag feedback">
+                            Feedback
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Gather customer ratings, comments,
+                        satisfaction levels and suggestions
+                        to improve your service.
+                    </p>
+
+
+                    <div class="template-info">
+
+                        <span>
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            Multiple fields
+
+                        </span>
+
+                        <span>
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                            Conditional logic
+
+                        </span>
+
+                    </div>
+
+
+                    <button class="use-template-btn"
+                            data-template="feedback">
+
+                        Use Template
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<script src="js/templates.js"></script>
+
+</body>
+
+</html>

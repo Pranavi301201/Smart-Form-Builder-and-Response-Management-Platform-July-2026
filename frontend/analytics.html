@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | Smart Forms</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Analytics CSS -->
+    <link rel="stylesheet" href="css/analytics.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+    <i class="fa-solid fa-layer-group"></i>
+
+    <h2>Smart Forms</h2>
+
+</div>
+
+
+        <nav class="sidebar-nav">
+
+    <a href="dashboard.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Dashboard</span>
+    </a>
+
+    <a href="create-form.html">
+        <i class="fa-solid fa-plus"></i>
+        <span>Create Form</span>
+    </a>
+
+    <a href="myforms.html">
+        <i class="fa-solid fa-file-lines"></i>
+        <span>My Forms</span>
+    </a>
+
+    <a href="myforms.html#">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Templates</span>
+    </a>
+
+    <a href="myforms.html#">
+        <i class="fa-solid fa-palette"></i>
+        <span>Themes</span>
+    </a>
+
+    <a href="analytics.html" class="active">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Analytics</span>
+    </a>
+
+    <a href="responses.html">
+        <i class="fa-solid fa-comments"></i>
+        <span>Responses</span>
+    </a>
+
+    <a href="myforms.html#">
+        <i class="fa-solid fa-share-nodes"></i>
+        <span>Shared Forms</span>
+    </a>
+
+    <a href="myforms.html#">
+        <i class="fa-solid fa-trash"></i>
+        <span>Trash</span>
+    </a>
+
+    <a href="myforms.html#">
+        <i class="fa-solid fa-gear"></i>
+        <span>Settings</span>
+    </a>
+
+</nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="home.html">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main class="main-content">
+
+
+        <!-- ======================================
+             TOP HEADER
+        ======================================= -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>Analytics Dashboard</h1>
+
+                <p>
+                    Track your form performance and response activity.
+                </p>
+
+            </div>
+
+
+            <button
+                class="refresh-btn"
+                id="refreshBtn"
+                type="button"
+            >
+
+                <i class="fa-solid fa-rotate"></i>
+
+                Refresh
+
+            </button>
+
+        </header>
+
+
+
+        <!-- ======================================
+             FORM INFORMATION
+        ======================================= -->
+
+        <section class="form-info">
+
+            <div class="form-title-section">
+
+                <span class="section-label">
+                    ANALYTICS
+                </span>
+
+                <h2 id="formTitle">
+                    Loading form...
+                </h2>
+
+                <p id="formDescription">
+                    Form performance overview
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             STATISTICS CARDS
+        ======================================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- Views -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon views-icon">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+
+                <div class="stat-content">
+
+                    <span class="stat-label">
+                        Total Views
+                    </span>
+
+                    <h3 id="totalViews">
+                        0
+                    </h3>
+
+                    <p>
+                        People who viewed this form
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Responses -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon responses-icon">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+
+                <div class="stat-content">
+
+                    <span class="stat-label">
+                        Responses
+                    </span>
+
+                    <h3 id="totalResponses">
+                        0
+                    </h3>
+
+                    <p>
+                        Submitted responses
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Completion Rate -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon completion-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div class="stat-content">
+
+                    <span class="stat-label">
+                        Completion Rate
+                    </span>
+
+                    <h3 id="completionRate">
+                        0%
+                    </h3>
+
+                    <p>
+                        Visitors who completed the form
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Drop-off Rate -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon dropoff-icon">
+                    <i class="fa-solid fa-arrow-trend-down"></i>
+                </div>
+
+                <div class="stat-content">
+
+                    <span class="stat-label">
+                        Drop-off Rate
+                    </span>
+
+                    <h3 id="dropOffRate">
+                        0%
+                    </h3>
+
+                    <p>
+                        Visitors who left without submitting
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             CHARTS SECTION
+        ======================================= -->
+
+        <section class="charts-grid">
+
+
+            <!-- Response Overview -->
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+
+                    <div>
+
+                        <h3>
+                            Response Overview
+                        </h3>
+
+                        <p>
+                            Form views compared with submissions
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                </div>
+
+                <div
+                    class="chart-container"
+                    id="responseChart"
+                >
+
+                    <div class="chart-placeholder">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        <p>
+                            Response chart will appear here
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Completion Overview -->
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+
+                    <div>
+
+                        <h3>
+                            Completion Overview
+                        </h3>
+
+                        <p>
+                            Completion and drop-off distribution
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+                <div
+                    class="chart-container"
+                    id="completionChart"
+                >
+
+                    <div class="chart-placeholder">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <p>
+                            Completion chart will appear here
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             RESPONSE SUMMARY
+        ======================================= -->
+
+        <section class="summary-card">
+
+            <div class="summary-header">
+
+                <div>
+
+                    <h3>
+                        Response Summary
+                    </h3>
+
+                    <p>
+                        A quick overview of your form activity.
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+            </div>
+
+
+            <div class="summary-grid">
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Total Views
+                    </span>
+
+                    <strong id="summaryViews">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Total Responses
+                    </span>
+
+                    <strong id="summaryResponses">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Completion Rate
+                    </span>
+
+                    <strong id="summaryCompletion">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Drop-off Rate
+                    </span>
+
+                    <strong id="summaryDropoff">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             LOADER
+        ======================================= -->
+
+        <div
+            class="loader-overlay"
+            id="loader"
+            style="display: none;"
+        >
+
+            <div class="loader-box">
+
+                <div class="spinner"></div>
+
+                <p>
+                    Loading analytics...
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ======================================
+             TOAST
+        ======================================= -->
+
+        <div
+            class="toast"
+            id="toast"
+        >
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span id="toastMessage">
+                Analytics updated successfully.
+            </span>
+
+        </div>
+
+    </main>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Analytics JavaScript -->
+    <script src="js/analytics.js"></script>
+
+</body>
+
+</html>

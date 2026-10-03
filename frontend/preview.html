@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Preview | Smart Form Builder</title>
+
+    <link rel="stylesheet" href="css/preview.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="topbar">
+
+        <div class="left">
+
+            <button id="backBtn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+
+        </div>
+
+        <div class="center">
+
+            <h2 id="previewTitle">
+                Form Preview
+            </h2>
+
+            <p>
+                This is how your form will appear to users.
+            </p>
+
+        </div>
+
+        <div class="right">
+
+            <button id="publishBtn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Publish
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Preview Area -->
+
+
+<main class="preview-container">
+
+    <div class="preview-card">
+
+        <div class="form-header">
+
+            <h1 id="formTitle">
+                Untitled Form
+            </h1>
+
+            <p id="formDescription">
+                Please fill all required fields.
+            </p>
+
+        </div>
+
+        <hr>
+
+
+        <!-- FORM -->
+
+        <!-- Fields will come here -->
+
+<!-- FORM -->
+
+<form id="previewForm">
+
+    <!-- PAGE 1 -->
+    <div id="formPage1" class="form-page">
+
+        <!-- Fields will be inserted here -->
+
+    </div>
+
+
+    <!-- PAGE 2 -->
+    <div id="formPage2" class="form-page" style="display: none;">
+
+        <!-- Next page fields will be inserted here -->
+
+    </div>
+
+
+    <!-- PAGE NAVIGATION -->
+
+    <div class="page-navigation">
+
+        <button
+            type="button"
+            id="backPageBtn"
+            style="display: none;">
+
+            Back
+
+        </button>
+
+
+        <button
+            type="button"
+            id="nextPageBtn">
+
+            Next
+
+        </button>
+
+
+        <button
+            type="submit"
+            id="submitPageBtn"
+            class="submit-btn"
+            style="display: none;">
+
+            Submit Form
+
+        </button>
+
+    </div>
+
+</form>
+
+
+    </div>
+
+</main>
+
+    <script src="js/preview.js"></script>
+
+</body>
+
+</html>

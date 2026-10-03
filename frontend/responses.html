@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Responses | Smart Form Builder</title>
+
+    <link rel="stylesheet"
+          href="css/responses.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+TOP NAVBAR
+========================================== -->
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <span>Smart Form Builder</span>
+
+    </div>
+
+    <div class="nav-right">
+        <button id="analyticsBtn" class="analytics-btn">
+        <i class="fa-solid fa-chart-line"></i>
+        Analytics
+    </button>
+
+        <button id="refreshBtn">
+
+            <i class="fa-solid fa-rotate"></i>
+
+            Refresh
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+PAGE HEADER
+========================================== -->
+
+<section class="page-header">
+
+    <div class="header-left">
+
+        <h1 id="formTitle">
+            Form Responses
+        </h1>
+
+        <p>
+            Monitor, search and manage all responses submitted for this form.
+        </p>
+
+    </div>
+
+    <div class="header-actions">
+
+    <div class="export-dropdown">
+
+        <button id="exportBtn" class="export-btn">
+
+            <i class="fa-solid fa-download"></i>
+
+            Export
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div id="exportMenu" class="export-menu">
+
+            <button id="exportCsv">
+                <i class="fa-solid fa-file-csv"></i>
+                CSV
+            </button>
+
+            <button id="exportExcel">
+                <i class="fa-solid fa-file-excel"></i>
+                Excel
+            </button>
+
+            <button id="exportPdf">
+                <i class="fa-solid fa-file-pdf"></i>
+                PDF
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+SUMMARY CARDS
+========================================== -->
+
+<section class="summary">
+
+    <div class="card">
+
+        <i class="fa-solid fa-file-circle-check"></i>
+
+        <div>
+
+            <h2 id="totalResponses">
+                0
+            </h2>
+
+            <span>
+                Total Responses
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+        <div>
+
+            <h2 id="todayResponses">
+                0
+            </h2>
+
+            <span>
+                Today's Responses
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <div>
+
+            <h2 id="lastResponseTime">
+                --
+            </h2>
+
+            <span>
+                Latest Response
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+FILTER BAR
+========================================== -->
+
+<section class="filter-bar">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search by field name or value..."
+        >
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+RESPONSES TABLE
+========================================== -->
+
+<section class="table-container">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>#</th>
+
+                <th>Submitted On</th>
+
+                <th>Answers</th>
+
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="responsesBody">
+
+            <!-- Dynamic responses -->
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<!-- ==========================================
+EMPTY STATE
+========================================== -->
+
+<div id="emptyState"
+     class="empty-state">
+
+    <i class="fa-solid fa-inbox"></i>
+
+    <h2>
+    No Responses Received
+    
+</h2>
+
+<p>
+    Once users submit this form, every response will appear here automatically.
+</p>
+
+</div>
+
+
+<!-- ==========================================
+VIEW RESPONSE MODAL
+========================================== -->
+
+<div id="responseModal"
+     class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+
+                <i class="fa-solid fa-eye"></i>
+
+                Response Details
+
+            </h2>
+
+            <button id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <div id="modalBody">
+
+            <!-- Dynamic response details -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+LOADER
+========================================== -->
+
+<div id="loader"
+     class="loader">
+
+    <div class="spinner"></div>
+
+    <p>
+        Loading Responses...
+    </p>
+
+</div>
+
+
+<!-- ==========================================
+TOAST
+========================================== -->
+
+<div id="toast"
+     class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Success
+    </span>
+
+</div>
+
+
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer>
+
+    <p>
+
+        © 2026 Smart Form Builder
+
+        <span>|</span>
+
+        Built with ❤️ using FastAPI & JavaScript
+
+    </p>
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/responses.js"></script>
+
+</body>
+
+</html>

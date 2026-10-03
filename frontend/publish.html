@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Form Published | Smart Form Builder</title>
+
+    <link rel="stylesheet" href="css/publish.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+        TOP HEADER
+============================ -->
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <span>Smart Forms</span>
+
+    </div>
+
+    <div class="header-title">
+
+        <h2>Form Published Successfully</h2>
+
+        <p>Your form is now live and ready to collect responses.</p>
+
+    </div>
+
+    <div class="header-actions">
+
+        <button id="dashboardBtn">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ===========================
+        MAIN CONTAINER
+============================ -->
+
+<div class="publish-container">
+
+    <!-- Success Banner -->
+
+    <section class="success-banner">
+
+        <div class="success-icon">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+        <div>
+
+            <h1>Congratulations!</h1>
+
+            <p>Your form has been published successfully.</p>
+
+        </div>
+
+    </section>
+        <!-- ===========================
+            FORM DETAILS
+    ============================ -->
+
+    <section class="details-grid">
+
+        <!-- Form Information Card -->
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <i class="fa-solid fa-file-circle-check"></i>
+
+                <h3>Form Information</h3>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="info-row">
+
+                    <span>Form Name</span>
+
+                    <strong id="formTitle">
+
+                        Student Registration
+
+                    </strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Form ID</span>
+
+                    <strong id="formId">
+
+                        FORM-20260801-001
+
+                    </strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Status</span>
+
+                    <span class="status published">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        Published
+
+                    </span>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Created On</span>
+
+                    <strong id="createdDate">
+
+                        01 Aug 2026
+
+                    </strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Published On</span>
+
+                    <strong id="publishedDate">
+
+                        01 Aug 2026
+
+                    </strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Owner</span>
+
+                    <strong>
+
+                        Admin
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Public Link Card -->
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <i class="fa-solid fa-link"></i>
+
+                <h3>Public Form Link</h3>
+
+            </div>
+
+            <div class="card-body">
+
+                <label>
+
+                    Anyone with this link can access your form.
+
+                </label>
+
+                <div class="link-box">
+
+                    <input
+                        id="publicLink"
+                        type="text"
+                        readonly
+                        value="http://localhost:8000/forms/FORM-20260801-001">
+
+                    <button id="copyLinkBtn">
+
+                        <i class="fa-solid fa-copy"></i>
+
+                        Copy
+
+                    </button>
+
+                </div>
+
+                <div class="link-buttons">
+
+                    <button id="openFormBtn">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        Open Form
+
+                    </button>
+
+                    <button id="downloadQRBtn">
+
+                        <i class="fa-solid fa-qrcode"></i>
+
+                        QR Code
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ===========================
+     EMAIL INVITATION SECTION
+=========================== -->
+
+<section class="email-invite-section">
+
+    <div class="email-invite-header">
+
+        <div class="email-invite-title">
+
+            <div class="email-icon">
+                <i class="fa-solid fa-paper-plane"></i>
+            </div>
+
+            <div>
+                <h2>Send Form via Email</h2>
+                <p>
+                    Invite multiple recipients to complete this form.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="recipient-info">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>
+                <strong id="recipientCount">0</strong>
+                recipients
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- RECIPIENT EMAILS -->
+
+    <div class="email-field">
+
+        <label for="recipientEmails">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            Recipient Email Addresses
+
+        </label>
+
+        <p class="field-help">
+            Enter multiple email addresses separated by commas or new lines.
+        </p>
+
+        <textarea
+    id="recipientEmails"
+    class="recipient-textarea"
+    placeholder="example@gmail.com
+student1@gmail.com
+student2@gmail.com"></textarea>
+
+<div id="recipientValidation" class="recipient-validation"></div>
+
+<div class="recipient-footer">
+
+            <span>
+                <i class="fa-solid fa-circle-info"></i>
+
+                You can add as many recipients as needed.
+            </span>
+
+            <button
+                type="button"
+                id="clearRecipientsBtn"
+                class="clear-recipients">
+
+                <i class="fa-solid fa-xmark"></i>
+
+                Clear All
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBJECT -->
+
+    <div class="email-field">
+
+        <label for="emailSubject">
+
+            <i class="fa-solid fa-heading"></i>
+
+            Email Subject
+
+            
+        </label>
+
+        <input
+            type="text"
+            id="emailSubject"
+            class="email-input"
+            value="Please fill out this form"
+            placeholder="Enter email subject">
+
+    </div>
+
+
+    <!-- MESSAGE -->
+
+    <div class="email-field">
+
+        <label for="emailMessage">
+
+            <i class="fa-solid fa-message"></i>
+
+            Message
+
+        </label>
+
+        <textarea
+            id="emailMessage"
+            class="message-textarea"
+            placeholder="Enter your message...">Hello,
+
+Please fill out the form using the link below.
+
+Thank you.</textarea>
+
+    </div>
+
+
+    <!-- FORM LINK PREVIEW -->
+
+    <div class="email-link-preview">
+
+        <div class="preview-icon">
+
+            <i class="fa-solid fa-link"></i>
+
+        </div>
+
+        <div class="preview-content">
+
+            <span>Form Link</span>
+
+            <strong id="emailFormLink">
+                Your form link will appear here
+            </strong>
+
+        </div>
+
+        <button
+            type="button"
+            id="copyEmailLinkBtn"
+            title="Copy form link">
+
+            <i class="fa-solid fa-copy"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- SEND ACTION -->
+
+    <div class="email-send-area">
+
+        <div class="send-note">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>
+                Recipients will receive an email containing your form link.
+            </span>
+
+        </div>
+
+        <button
+            type="button"
+            id="sendFormEmailBtn"
+            class="send-form-email-btn">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+            Send Form
+
+        </button>
+
+    </div>
+
+</section>
+<!-- ===========================
+        STATISTICS
+=========================== -->
+
+<section class="stats-section">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-square-poll-horizontal"></i>
+
+        <h2 id="responseCount">0</h2>
+
+        <p>Total Responses</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-eye"></i>
+
+        <h2 id="viewCount">0</h2>
+
+        <p>Total Views</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <strong id="lastResponse">--</strong>
+
+        <p>Last Response</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+        <strong id="lastViewed">--</strong>
+
+        <p>Last Viewed</p>
+
+    </div>
+
+</section>    
+<!-- ===========================
+        SHARE SECTION
+=========================== -->
+
+<section class="share-section">
+
+    <h2>
+
+        <i class="fa-solid fa-share-nodes"></i>
+
+        Share Your Form
+
+    </h2>
+
+    <div class="share-buttons">
+
+        <button class="whatsapp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp
+
+        </button>
+
+        <button class="email">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            Email
+
+        </button>
+
+        <button class="telegram">
+
+            <i class="fa-brands fa-telegram"></i>
+
+            Telegram
+
+        </button>
+
+        <button class="copy">
+
+            <i class="fa-solid fa-copy"></i>
+
+            Copy Link
+
+        </button>
+
+    </div>
+
+</section>
+<!-- ===========================
+        QUICK ACTIONS
+=========================== -->
+
+<section class="quick-actions">
+
+    <h2>
+
+        <i class="fa-solid fa-bolt"></i>
+
+        Quick Actions
+
+    </h2>
+
+    <div class="action-grid">
+
+        <button class="myforms">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            My Forms
+
+        </button>
+
+        <button class="responses">
+
+            <i class="fa-solid fa-square-poll-horizontal"></i>
+
+            Responses
+
+        </button>
+
+        <button class="analytics">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            Analytics
+
+        </button>
+
+        <button class="dashboard">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </button>
+
+    </div>
+
+</section>
+<!-- ===========================
+        QR CODE
+=========================== -->
+
+<section class="qr-card">
+
+    <h2>
+
+        <i class="fa-solid fa-qrcode"></i>
+
+        QR Code
+
+    </h2>
+
+    <div class="qr-box">
+
+        <i class="fa-solid fa-qrcode"></i>
+
+    </div>
+
+    <button id="downloadQRBtn">
+
+        <i class="fa-solid fa-download"></i>
+
+        Download QR Code
+
+    </button>
+
+</section>
+<footer class="footer">
+
+    © 2026 Smart Form Builder | Infosys Springboard Internship
+
+</footer>
+<div id="loader" class="loader">
+
+    <div class="spinner"></div>
+
+    <p>Loading...</p>
+
+</div>
+</div>
+
+<script src="js/publish.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:#f5f9ff;
+    height:100vh;
+}
+
+/* Container */
+
+.container{
+    display:flex;
+    width:100%;
+    height:100vh;
+}
+
+/* ===========================
+      LEFT SECTION
+=========================== */
+
+.left{
+
+    width:42%;
+    position:relative;
+
+    background:url("../images/regi1.jpg")
+    center center/cover no-repeat;
+
+}
+
+/* Logo */
+
+.logo{
+
+    position:absolute;
+
+    top:25px;
+    left:25px;
+
+    width:90px;
+
+    padding:12px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+      RIGHT SECTION
+=========================== */
+
+.right{
+
+    width:58%;
+
+    background:#f5f9ff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:40px 70px;
+
+}
+
+/* Top */
+
+.top{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.top span{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+.login-btn{
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    border:2px solid #2563eb;
+
+    padding:12px 30px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* Form */
+
+.form-box{
+    width:650px;
+    max-width:100%;
+    margin:auto;
+}
+
+.form-box h1{
+    font-size:56px;
+    white-space: nowrap;
+    margin-bottom:15px;
+}
+
+.form-box p{
+
+    font-size:21px;
+
+    color:#666;
+
+    margin-bottom:40px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:18px;
+
+    margin-bottom:22px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 8px rgba(37,99,235,.2);
+
+}
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.container{
+
+flex-direction:column;
+
+}
+
+.left{
+
+width:100%;
+
+height:320px;
+
+}
+
+.right{
+
+width:100%;
+
+padding:40px;
+
+}
+
+.form-box{
+
+width:100%;
+
+}
+
+.form-box h1{
+
+font-size:42px;
+
+}
+
+}

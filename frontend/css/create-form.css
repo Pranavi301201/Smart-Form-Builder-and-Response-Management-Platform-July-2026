@@ -1,0 +1,4187 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#f5f8fc;
+    color:#374151;
+    overflow:hidden;
+
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    font-family:'Poppins',sans-serif;
+}
+
+input,
+textarea,
+select{
+
+    font-family:'Poppins',sans-serif;
+    outline:none;
+
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:260px;
+    height:100vh;
+
+    background:#ffffff;
+
+    border-right:1px solid #e5e7eb;
+
+    overflow-y:auto;
+
+    z-index:999;
+
+}
+
+/* Logo */
+
+.logo{
+
+    height:75px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    border-bottom:1px solid #eef2f7;
+
+}
+
+.logo i{
+
+    font-size:28px;
+
+    color:#2563eb;
+
+}
+
+.logo h2{
+
+    color:#2563eb;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/* Menu */
+
+.menu{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+.menu li{
+
+    margin:8px 15px;
+
+}
+
+.menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:13px 18px;
+
+    border-radius:12px;
+
+    color:#374151;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.menu li a i{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+/* Hover */
+
+.menu li a:hover{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+/* Active */
+
+.menu li.active a{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.25);
+
+}
+
+/* Logout */
+
+.logout{
+
+    margin-top:35px;
+
+}
+
+.logout a{
+
+    color:#ef4444;
+
+}
+
+.logout a:hover{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+/* Scroll */
+
+.sidebar::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:#d1d5db;
+
+    border-radius:10px;
+
+}
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.main-content{
+
+    margin-left:260px;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar{
+
+    height:75px;
+
+    background:#ffffff;
+
+    border-bottom:1px solid #e5e7eb;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+/* Form Title */
+
+.form-title{
+
+    border:none;
+
+    background:transparent;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#1f2937;
+
+    width:350px;
+
+}
+
+.form-title:focus{
+
+    border-bottom:2px solid #2563eb;
+
+}
+
+/* Buttons */
+
+.top-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+/* Common */
+
+.top-actions button{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:11px 22px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* Save */
+
+#saveBtn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+#saveBtn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* Preview */
+
+#previewBtn{
+
+    background:#f8fafc;
+
+    color:#2563eb;
+
+    border:1px solid #2563eb;
+
+}
+
+#previewBtn:hover{
+
+    background:#eff6ff;
+
+}
+
+/* Publish */
+
+#publishBtn{
+
+    background:#10b981;
+
+    color:white;
+
+}
+
+#publishBtn:hover{
+
+    background:#059669;
+
+}
+
+/* Icons */
+
+.top-actions i{
+
+    font-size:15px;
+
+}
+/* =====================================================
+   WORKSPACE
+===================================================== */
+
+.workspace{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:300px 1fr 320px;
+
+    overflow:hidden;
+
+}
+
+/* =====================================================
+   COMPONENTS PANEL
+===================================================== */
+
+.components{
+
+    background:#ffffff;
+
+    border-right:1px solid #e5e7eb;
+
+    overflow-y:auto;
+
+    padding:22px;
+
+}
+
+/* Scroll */
+
+.components::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.components::-webkit-scrollbar-thumb{
+
+    background:#d1d5db;
+
+    border-radius:10px;
+
+}
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#f8fafc;
+
+    border:1px solid #dbeafe;
+
+    border-radius:12px;
+
+    padding:12px 15px;
+
+    margin-bottom:25px;
+
+}
+
+.search-box i{
+
+    color:#2563eb;
+
+    font-size:16px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    background:transparent;
+
+    font-size:14px;
+
+    color:#374151;
+
+}
+
+/* =====================================================
+   GROUPS
+===================================================== */
+
+.group{
+
+    margin-bottom:28px;
+
+}
+
+.group h3{
+
+    font-size:15px;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+}
+
+/* =====================================================
+   COMPONENT CARDS
+===================================================== */
+
+.field{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    background:white;
+
+    border:1px solid #dbeafe;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    margin-bottom:12px;
+
+    cursor:grab;
+
+    transition:.25s;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    color:#374151;
+
+}
+
+.field:active{
+
+    cursor:grabbing;
+
+}
+
+/* Hover */
+
+.field:hover{
+
+    background:#eff6ff;
+
+    border-color:#2563eb;
+
+    transform:translateX(6px);
+
+    box-shadow:0 6px 18px rgba(37,99,235,.10);
+
+}
+
+/* Icon */
+
+.field i{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:15px;
+
+}
+
+/* =====================================================
+   ICON COLORS
+===================================================== */
+
+.fa-font{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.fa-user{
+
+    background:#e0f2fe;
+
+    color:#0284c7;
+
+}
+
+.fa-envelope{
+
+    background:#ede9fe;
+
+    color:#7c3aed;
+
+}
+
+.fa-phone{
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+}
+
+.fa-location-dot{
+
+    background:#fee2e2;
+
+    color:#ef4444;
+
+}
+
+.fa-hashtag{
+
+    background:#fef3c7;
+
+    color:#d97706;
+
+}
+
+.fa-percent{
+
+    background:#fef9c3;
+
+    color:#ca8a04;
+
+}
+
+.fa-indian-rupee-sign{
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+}
+
+.fa-caret-down{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.fa-circle-dot{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.fa-square-check{
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+}
+
+.fa-calendar{
+
+    background:#fce7f3;
+
+    color:#db2777;
+
+}
+
+.fa-clock{
+
+    background:#cffafe;
+
+    color:#0891b2;
+
+}
+
+.fa-calendar-days{
+
+    background:#ede9fe;
+
+    color:#7c3aed;
+
+}
+
+/* =====================================================
+   DRAG EFFECT
+===================================================== */
+
+.field.dragging{
+
+    opacity:.5;
+
+}
+
+.field::after{
+
+    content:"";
+
+    margin-left:auto;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+.field:hover::after{
+
+    content:"Drag";
+
+}
+
+/* =====================================================
+   SMALL SECTION DIVIDER
+===================================================== */
+
+.group:not(:last-child){
+
+    border-bottom:1px solid #eef2f7;
+
+    padding-bottom:20px;
+
+}
+/* =====================================================
+   FORM BUILDER
+===================================================== */
+
+.builder{
+
+    background:#f5f8fc;
+
+    padding:30px;
+
+    overflow-y:auto;
+
+}
+
+.builder::-webkit-scrollbar{
+
+    width:7px;
+
+}
+
+.builder::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:10px;
+
+}
+
+/* =====================================================
+   BUILDER HEADER
+===================================================== */
+
+.builder-header{
+
+    margin-bottom:25px;
+
+}
+
+.builder-header h2{
+
+    font-size:30px;
+
+    color:#2563eb;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+.builder-header p{
+
+    color:#6b7280;
+
+    font-size:15px;
+
+}
+
+/* =====================================================
+   DROP ZONE
+===================================================== */
+
+.drop-zone{
+
+    background:white;
+
+    border:3px dashed #2563eb;
+
+    border-radius:18px;
+
+    min-height:700px;
+
+    padding:30px;
+
+    transition:.3s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.drop-zone.drag-over{
+
+    background:#eff6ff;
+
+    border-color:#1d4ed8;
+
+}
+
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
+
+.placeholder{
+
+    height:600px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+}
+
+.placeholder i{
+
+    font-size:80px;
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.placeholder h3{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+    font-size:28px;
+
+}
+
+.placeholder p{
+
+    font-size:16px;
+
+}
+
+/* =====================================================
+   FORM FIELD CARD
+===================================================== */
+
+.form-field{
+
+    background:white;
+
+    border:2px solid transparent;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+
+    position:relative;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+
+}
+
+.form-field:hover{
+
+    border-color:#2563eb;
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================================
+   FIELD HEADER
+===================================================== */
+
+.field-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+/* =====================================================
+   FIELD TITLE
+===================================================== */
+
+.field-title{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    font-size:18px;
+
+}
+
+/* =====================================================
+   FIELD ACTIONS
+===================================================== */
+
+.field-actions{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.field-actions button{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#f8fafc;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.field-actions button:hover{
+
+    background:#dbeafe;
+
+}
+
+.field-actions i{
+
+    color:#2563eb;
+
+    font-size:15px;
+
+}
+
+/* Delete */
+
+.delete-btn:hover{
+
+    background:#fee2e2 !important;
+
+}
+
+.delete-btn i{
+
+    color:#ef4444;
+
+}
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.form-field label{
+
+    display:block;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#374151;
+
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form-field input,
+
+.form-field textarea,
+
+.form-field select{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.form-field input:focus,
+
+.form-field textarea:focus,
+
+.form-field select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.form-field textarea{
+
+    resize:vertical;
+
+}
+
+/* =====================================================
+   RADIO & CHECKBOX
+===================================================== */
+
+.form-field input[type=radio],
+
+.form-field input[type=checkbox]{
+
+    width:auto;
+
+    margin-right:8px;
+
+}
+
+/* =====================================================
+   DRAGGING EFFECT
+===================================================== */
+
+.form-field.dragging{
+
+    opacity:.6;
+
+    transform:rotate(1deg);
+
+}
+
+/* =====================================================
+   FIELD SELECTED
+===================================================== */
+
+.form-field.selected{
+
+    border:2px solid #2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* =====================================================
+   ADD FIELD ANIMATION
+===================================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.form-field{
+
+    animation:fadeIn .3s ease;
+
+}
+
+/* =====================================================
+   FIELD TOOLBAR
+===================================================== */
+
+.field-toolbar{
+
+    position:absolute;
+
+    top:-15px;
+
+    right:18px;
+
+    display:flex;
+
+    gap:8px;
+
+    opacity:0;
+
+    transition:.3s;
+
+}
+
+.form-field:hover .field-toolbar{
+
+    opacity:1;
+
+}
+
+.field-toolbar button{
+
+    width:34px;
+
+    height:34px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+
+    cursor:pointer;
+
+}
+
+.field-toolbar button:hover{
+
+    background:#eff6ff;
+
+}
+
+.field-toolbar i{
+
+    color:#2563eb;
+
+}
+/* =====================================================
+   PROPERTIES PANEL
+===================================================== */
+
+.properties{
+
+    background:#ffffff;
+
+    border-left:1px solid #e5e7eb;
+
+    padding:25px;
+
+    overflow-y:auto;
+
+}
+
+.properties::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.properties::-webkit-scrollbar-thumb{
+
+    background:#d1d5db;
+
+    border-radius:10px;
+
+}
+
+/* Heading */
+
+.properties h2{
+
+    color:#2563eb;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.properties h3{
+
+    margin-top:20px;
+
+    margin-bottom:12px;
+
+    color:#2563eb;
+
+    font-size:18px;
+
+}
+
+/* Divider */
+
+.properties hr{
+
+    border:none;
+
+    border-top:1px solid #e5e7eb;
+
+    margin:18px 0;
+
+}
+
+/* Labels */
+
+.properties label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:6px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+/* Inputs */
+
+.properties input[type=text],
+.properties input[type=number],
+.properties textarea,
+.properties select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.properties input:focus,
+.properties textarea:focus,
+.properties select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+/* Checkbox */
+
+.properties input[type=checkbox]{
+
+    margin-right:8px;
+
+}
+
+/* No Selection */
+
+#noSelection{
+
+    color:#94a3b8;
+
+    text-align:center;
+
+    margin-top:80px;
+
+    line-height:1.8;
+
+}
+
+/* Buttons */
+
+.properties button{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.properties button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* =====================================================
+   CHOICE LIST
+===================================================== */
+
+.choice-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:10px;
+
+}
+
+.choice-item input{
+
+    flex:1;
+
+}
+
+.choice-item button{
+
+    width:40px;
+
+    height:40px;
+
+    padding:0;
+
+    background:#ef4444;
+
+    border-radius:8px;
+
+}
+
+.choice-item button:hover{
+
+    background:#dc2626;
+
+}
+
+/* Add Choice */
+
+#addChoiceBtn{
+
+    margin-top:15px;
+
+    background:#10b981;
+
+}
+
+#addChoiceBtn:hover{
+
+    background:#059669;
+
+}
+
+/* =====================================================
+   FIELD SETTINGS
+===================================================== */
+
+.setting-box{
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    margin-top:18px;
+
+}
+
+.setting-box h4{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1300px){
+
+.workspace{
+
+    grid-template-columns:260px 1fr 280px;
+
+}
+
+}
+
+@media(max-width:1100px){
+
+.workspace{
+
+    grid-template-columns:250px 1fr;
+
+}
+
+.properties{
+
+    display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+    width:80px;
+
+}
+
+.logo h2{
+
+    display:none;
+
+}
+
+.menu li a{
+
+    justify-content:center;
+
+    font-size:0;
+
+}
+
+.menu li a i{
+
+    font-size:18px;
+
+}
+
+.main-content{
+
+    margin-left:80px;
+
+}
+
+.workspace{
+
+    grid-template-columns:1fr;
+
+}
+
+.components{
+
+    display:none;
+
+}
+
+.topbar{
+
+    flex-direction:column;
+
+    height:auto;
+
+    gap:15px;
+
+    padding:20px;
+
+}
+
+.top-actions{
+
+    width:100%;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.form-title{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+}
+.choice-row{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.choice-row input{
+    flex:1;
+    padding:8px 10px;
+    border:1px solid #dbeafe;
+    border-radius:6px;
+}
+
+.choice-row button{
+    width:40px;
+    border:none;
+    background:#ef4444;
+    color:#fff;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.choice-row button:hover{
+    background:#dc2626;
+}
+
+/* ==========================================
+   PROFESSIONAL THEME MENU
+========================================== */
+
+.builder-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ==========================================
+   THEME BUTTON
+========================================== */
+
+.theme-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 16px;
+
+    border: 1px solid #2962ff;
+    border-radius: 8px;
+
+    background: #2962ff;
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    box-shadow: 0 3px 8px rgba(41, 98, 255, 0.20);
+}
+
+.theme-btn:hover {
+    background: #1e4ed8;
+    border-color: #1e4ed8;
+    color: #ffffff;
+
+    box-shadow: 0 5px 12px rgba(41, 98, 255, 0.30);
+}
+
+.theme-btn i {
+    font-size: 14px;
+}
+.theme-menu {
+    position: absolute;
+    top: 52px;
+    right: 0;
+
+    width: 270px;
+    padding: 10px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.15);
+
+    display: none;
+    z-index: 1000;
+}
+
+.theme-option {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #1e293b;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.theme-option:hover {
+    background: #f8fafc;
+}
+
+.theme-option strong {
+    display: block;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.theme-option small {
+    display: block;
+    margin-top: 2px;
+
+    color: #64748b;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+}
+
+/* Theme color preview */
+
+.theme-preview {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Professional */
+.professional-preview {
+    background: linear-gradient(135deg, #2563eb, #eff6ff);
+}
+
+/* Midnight */
+.midnight-preview {
+    background: linear-gradient(135deg, #0f172a, #334155);
+}
+
+/* Ocean */
+.ocean-preview {
+    background: linear-gradient(135deg, #0284c7, #e0f2fe);
+}
+
+/* Emerald */
+.emerald-preview {
+    background: linear-gradient(135deg, #059669, #ecfdf5);
+}
+
+/* Royal */
+.royal-preview {
+    background: linear-gradient(135deg, #7c3aed, #f5f3ff);
+}
+
+/* Rose */
+.rose-preview {
+    background: linear-gradient(135deg, #e11d48, #fff1f2);
+}
+
+/* =====================================================
+   FORM THEME SYSTEM
+===================================================== */
+
+/* -----------------------------------------------------
+   THEME VARIABLES
+----------------------------------------------------- */
+
+.builder {
+    --theme-primary: #2563eb;
+    --theme-primary-dark: #1d4ed8;
+    --theme-light: #eff6ff;
+    --theme-border: #dbeafe;
+    --theme-bg: #f5f8fc;
+    --theme-card: #ffffff;
+    --theme-text: #1f2937;
+}
+
+
+/* =====================================================
+   PROFESSIONAL
+===================================================== */
+
+.builder[data-theme="professional"] {
+    --theme-primary: #2563eb;
+    --theme-primary-dark: #1d4ed8;
+    --theme-light: #eff6ff;
+    --theme-border: #bfdbfe;
+    --theme-bg: #f5f8fc;
+    --theme-card: #ffffff;
+    --theme-text: #1f2937;
+}
+
+
+/* =====================================================
+   MIDNIGHT
+===================================================== */
+
+.builder[data-theme="midnight"] {
+    --theme-primary: #60a5fa;
+    --theme-primary-dark: #3b82f6;
+    --theme-light: #1e293b;
+    --theme-border: #475569;
+    --theme-bg: #020617;
+    --theme-card: #0f172a;
+    --theme-text: #f8fafc;
+}
+
+
+/* =====================================================
+   OCEAN
+===================================================== */
+
+.builder[data-theme="ocean"] {
+    --theme-primary: #0284c7;
+    --theme-primary-dark: #0369a1;
+    --theme-light: #e0f2fe;
+    --theme-border: #7dd3fc;
+    --theme-bg: #f0f9ff;
+    --theme-card: #ffffff;
+    --theme-text: #0c4a6e;
+}
+
+
+/* =====================================================
+   EMERALD
+===================================================== */
+
+.builder[data-theme="emerald"] {
+    --theme-primary: #059669;
+    --theme-primary-dark: #047857;
+    --theme-light: #ecfdf5;
+    --theme-border: #86efac;
+    --theme-bg: #f0fdf4;
+    --theme-card: #ffffff;
+    --theme-text: #064e3b;
+}
+
+
+/* =====================================================
+   ROYAL
+===================================================== */
+
+.builder[data-theme="royal"] {
+    --theme-primary: #7c3aed;
+    --theme-primary-dark: #6d28d9;
+    --theme-light: #f5f3ff;
+    --theme-border: #c4b5fd;
+    --theme-bg: #faf9ff;
+    --theme-card: #ffffff;
+    --theme-text: #3b0764;
+}
+
+
+/* =====================================================
+   ROSE
+===================================================== */
+
+.builder[data-theme="rose"] {
+    --theme-primary: #e11d48;
+    --theme-primary-dark: #be123c;
+    --theme-light: #fff1f2;
+    --theme-border: #fda4af;
+    --theme-bg: #fff8f9;
+    --theme-card: #ffffff;
+    --theme-text: #881337;
+}
+
+
+/* =====================================================
+   APPLY THEME TO BUILDER
+===================================================== */
+
+.builder {
+    background: var(--theme-bg);
+}
+
+
+/* Builder heading */
+
+.builder-header h2 {
+    color: var(--theme-primary);
+}
+
+
+/* Builder description */
+
+.builder-header p {
+    color: var(--theme-text);
+    opacity: 0.65;
+}
+
+
+/* Drop zone */
+
+.builder .drop-zone {
+    background: var(--theme-card);
+    border-color: var(--theme-primary);
+}
+
+
+/* Drop zone while dragging */
+
+.builder .drop-zone.drag-over {
+    background: var(--theme-light);
+    border-color: var(--theme-primary-dark);
+}
+
+
+/* Placeholder */
+
+.builder .placeholder i {
+    color: var(--theme-primary);
+}
+
+.builder .placeholder h3 {
+    color: var(--theme-primary);
+}
+
+
+/* =====================================================
+   FORM FIELD CARDS
+===================================================== */
+
+.builder .form-field {
+    background: var(--theme-card);
+    border-color: transparent;
+}
+
+
+/* Hover */
+
+.builder .form-field:hover {
+    border-color: var(--theme-primary);
+}
+
+
+/* Selected */
+
+.builder .form-field.selected {
+    border-color: var(--theme-primary);
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.12),
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Field title */
+
+.builder .field-title {
+    color: var(--theme-primary);
+}
+
+
+/* Labels */
+
+.builder .form-field label {
+    color: var(--theme-text);
+}
+
+
+/* Inputs */
+
+.builder .form-field input,
+.builder .form-field textarea,
+.builder .form-field select {
+
+    background: var(--theme-card);
+
+    color: var(--theme-text);
+
+    border-color: var(--theme-border);
+}
+
+
+/* Input focus */
+
+.builder .form-field input:focus,
+.builder .form-field textarea:focus,
+.builder .form-field select:focus {
+
+    border-color: var(--theme-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =====================================================
+   THEME BUTTON
+===================================================== */
+
+.theme-btn {
+    background: var(--theme-primary);
+    border-color: var(--theme-primary);
+}
+
+.theme-btn:hover {
+    background: var(--theme-primary-dark);
+    border-color: var(--theme-primary-dark);
+}
+
+
+/* =====================================================
+   FIELD ACTION BUTTONS
+===================================================== */
+
+.builder .field-actions button {
+    background: var(--theme-light);
+}
+
+.builder .field-actions button:hover {
+    background: var(--theme-border);
+}
+
+.builder .field-actions i {
+    color: var(--theme-primary);
+}
+
+
+/* =====================================================
+   FIELD TOOLBAR
+===================================================== */
+
+.builder .field-toolbar button {
+    background: var(--theme-card);
+}
+
+.builder .field-toolbar button:hover {
+    background: var(--theme-light);
+}
+
+.builder .field-toolbar i {
+    color: var(--theme-primary);
+}
+
+
+/* =====================================================
+   MIDNIGHT - SPECIAL DARK STYLING
+===================================================== */
+
+.builder[data-theme="midnight"] {
+
+    color: #e2e8f0;
+
+}
+
+.builder[data-theme="midnight"] .builder-header p {
+
+    color: #94a3b8;
+
+}
+
+.builder[data-theme="midnight"] .drop-zone {
+
+    background: #0f172a;
+
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35);
+
+}
+
+.builder[data-theme="midnight"] .form-field {
+
+    background: #1e293b;
+
+    border-color: #334155;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+.builder[data-theme="midnight"] .form-field:hover {
+
+    border-color: #60a5fa;
+
+}
+
+.builder[data-theme="midnight"] .form-field.selected {
+
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 0 4px rgba(96, 165, 250, 0.15),
+        0 10px 30px rgba(0, 0, 0, 0.30);
+
+}
+
+.builder[data-theme="midnight"] .form-field label {
+
+    color: #e2e8f0;
+
+}
+
+.builder[data-theme="midnight"] .form-field input,
+.builder[data-theme="midnight"] .form-field textarea,
+.builder[data-theme="midnight"] .form-field select {
+
+    background: #0f172a;
+
+    color: #f8fafc;
+
+    border-color: #475569;
+
+}
+
+.builder[data-theme="midnight"] .form-field input::placeholder,
+.builder[data-theme="midnight"] .form-field textarea::placeholder {
+
+    color: #64748b;
+
+}
+
+.builder[data-theme="midnight"] .field-actions button {
+
+    background: #334155;
+
+}
+
+.builder[data-theme="midnight"] .field-actions button:hover {
+
+    background: #475569;
+
+}
+
+
+/* =====================================================
+   OCEAN SPECIAL
+===================================================== */
+
+.builder[data-theme="ocean"] .form-field {
+
+    box-shadow:
+        0 6px 22px rgba(2, 132, 199, 0.08);
+
+}
+
+
+/* =====================================================
+   EMERALD SPECIAL
+===================================================== */
+
+.builder[data-theme="emerald"] .form-field {
+
+    box-shadow:
+        0 6px 22px rgba(5, 150, 105, 0.08);
+
+}
+
+
+/* =====================================================
+   ROYAL SPECIAL
+===================================================== */
+
+.builder[data-theme="royal"] .form-field {
+
+    box-shadow:
+        0 6px 22px rgba(124, 58, 237, 0.08);
+
+}
+
+
+/* =====================================================
+   ROSE SPECIAL
+===================================================== */
+
+.builder[data-theme="rose"] .form-field {
+
+    box-shadow:
+        0 6px 22px rgba(225, 29, 72, 0.08);
+
+}
+
+
+/* =====================================================
+   THEME MENU
+===================================================== */
+
+.builder-header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.theme-menu {
+
+    position: absolute;
+
+    top: 52px;
+    right: 0;
+
+    width: 330px;
+
+    padding: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, 0.16),
+        0 4px 12px rgba(15, 23, 42, 0.08);
+
+    display: none;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    z-index: 5000;
+
+    max-height: 420px;
+
+    overflow-y: auto;
+}
+
+
+/* JavaScript adds this */
+
+.theme-menu.show {
+
+    display: grid;
+
+}
+
+
+/* =====================================================
+   THEME OPTION
+===================================================== */
+
+.theme-option {
+
+    width: 100%;
+
+    min-height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px;
+
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #1e293b;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+}
+
+
+.theme-option:hover {
+
+    background: #f8fafc;
+
+    border-color: #dbeafe;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* Selected theme */
+
+.theme-option.active {
+
+    background: #eff6ff;
+
+    border-color: #2563eb;
+
+}
+
+
+/* =====================================================
+   THEME PREVIEW
+===================================================== */
+
+.theme-preview {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.35),
+        0 2px 5px rgba(0,0,0,0.08);
+
+}
+
+
+/* Professional */
+
+.professional-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #60a5fa,
+            #eff6ff
+        );
+
+}
+
+
+/* Midnight */
+
+.midnight-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #020617,
+            #0f172a,
+            #334155
+        );
+
+}
+
+
+/* Ocean */
+
+.ocean-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0369a1,
+            #0ea5e9,
+            #e0f2fe
+        );
+
+}
+
+
+/* Emerald */
+
+.emerald-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #047857,
+            #10b981,
+            #d1fae5
+        );
+
+}
+
+
+/* Royal */
+
+.royal-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b21b6,
+            #7c3aed,
+            #ede9fe
+        );
+
+}
+
+
+/* Rose */
+
+.rose-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #be123c,
+            #e11d48,
+            #ffe4e6
+        );
+
+}
+
+
+/* =====================================================
+   THEME TEXT
+===================================================== */
+
+.theme-option strong {
+
+    display: block;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+
+}
+
+
+.theme-option small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+}
+
+
+/* =====================================================
+   MENU SCROLLBAR
+===================================================== */
+
+.theme-menu::-webkit-scrollbar {
+
+    width: 5px;
+
+}
+
+.theme-menu::-webkit-scrollbar-thumb {
+
+    background: #cbd5e1;
+
+    border-radius: 10px;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px) {
+
+    .theme-menu {
+
+        width: 290px;
+
+        grid-template-columns: 1fr;
+
+        right: -5px;
+
+    }
+
+}
+/* =========================================================
+   THEME MORE BUTTON
+========================================================= */
+
+.theme-more {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px;
+
+    margin-top: 8px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #1e293b;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.theme-more:hover {
+    background: #eff6ff;
+
+    border-color: #bfdbfe;
+
+    transform: translateX(2px);
+}
+
+.theme-more .more-icon {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    flex-shrink: 0;
+}
+
+.theme-more strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.theme-more small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    color: #64748b;
+}
+
+.more-arrow {
+
+    margin-left: auto;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DESIGN PANEL
+========================================================= */
+
+.design-panel {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 390px;
+
+    height: 100vh;
+
+    background: #ffffff;
+
+    border-left: 1px solid #e2e8f0;
+
+    box-shadow: -15px 0 45px rgba(15, 23, 42, .15);
+
+    z-index: 3000;
+
+    transform: translateX(100%);
+
+    transition: transform .3s cubic-bezier(.4,0,.2,1);
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+
+/* Open */
+
+.design-panel.open {
+
+    transform: translateX(0);
+
+}
+
+
+/* =========================================================
+   DESIGN PANEL HEADER
+========================================================= */
+
+.design-panel-header {
+
+    padding: 25px 24px 22px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    background: #ffffff;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 2;
+}
+
+.design-eyebrow {
+
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 5px;
+}
+
+.design-panel-header h2 {
+
+    font-size: 24px;
+
+    color: #111827;
+
+    margin: 0 0 5px;
+}
+
+.design-panel-header p {
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin: 0;
+
+    max-width: 280px;
+}
+
+
+/* Close */
+
+.close-design {
+
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: .2s;
+}
+
+.close-design:hover {
+
+    background: #fee2e2;
+
+    color: #ef4444;
+}
+
+
+/* =========================================================
+   DESIGN SECTION
+========================================================= */
+
+.design-section {
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.design-section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.design-section-title > i {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 14px;
+}
+
+.design-section-title strong {
+
+    display: block;
+
+    font-size: 14px;
+
+    color: #1e293b;
+}
+
+.design-section-title span {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #94a3b8;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   DESIGN CONTROLS
+========================================================= */
+
+.design-control {
+
+    margin-bottom: 18px;
+}
+
+.design-control:last-child {
+
+    margin-bottom: 0;
+}
+
+.design-control label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+/* Inputs */
+
+.design-control input[type="text"],
+.design-control select {
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: .2s;
+}
+
+.design-control input[type="text"]:focus,
+.design-control select:focus {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37,99,235,.10);
+}
+
+
+/* =========================================================
+   COLOR CONTROL
+========================================================= */
+
+.color-control {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.color-control input[type="color"] {
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 3px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 9px;
+
+    background: white;
+
+    cursor: pointer;
+}
+
+.color-control input[type="text"] {
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   RANGE
+========================================================= */
+
+.design-control input[type="range"] {
+
+    width: 100%;
+
+    accent-color: #2563eb;
+
+    cursor: pointer;
+}
+
+.range-values {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    margin-top: 5px;
+}
+
+.range-values span:nth-child(2) {
+
+    color: #2563eb;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.design-panel-footer {
+
+    padding: 20px 24px 30px;
+
+    margin-top: auto;
+}
+
+.reset-design {
+
+    width: 100%;
+
+    height: 42px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.reset-design:hover {
+
+    background: #f8fafc;
+
+    border-color: #94a3b8;
+}
+
+
+/* =========================================================
+   PANEL SCROLLBAR
+========================================================= */
+
+.design-panel::-webkit-scrollbar {
+
+    width: 6px;
+}
+
+.design-panel::-webkit-scrollbar-thumb {
+
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+/* =====================================================
+   FORM THEME SYSTEM
+   STEP 1 - THEME VARIABLES
+===================================================== */
+
+.builder {
+    --theme-primary: #2563eb;
+    --theme-primary-dark: #1d4ed8;
+    --theme-background: #ffffff;
+    --theme-surface: #ffffff;
+    --theme-input-background: #ffffff;
+    --theme-text: #1f2937;
+    --theme-muted: #64748b;
+    --theme-border: #dbe3ef;
+    --theme-radius: 12px;
+}
+
+
+/* =========================
+   PROFESSIONAL
+========================= */
+
+.builder[data-theme="professional"] {
+    --theme-primary: #2563eb;
+    --theme-primary-dark: #1d4ed8;
+    --theme-background: #f8fafc;
+    --theme-surface: #ffffff;
+    --theme-input-background: #ffffff;
+    --theme-text: #1e293b;
+    --theme-muted: #64748b;
+    --theme-border: #dbe3ef;
+    --theme-radius: 10px;
+}
+
+
+/* =========================
+   MIDNIGHT
+========================= */
+
+.builder[data-theme="midnight"] {
+    --theme-primary: #60a5fa;
+    --theme-primary-dark: #3b82f6;
+    --theme-background: #0f172a;
+    --theme-surface: #1e293b;
+    --theme-input-background: #0f172a;
+    --theme-text: #f8fafc;
+    --theme-muted: #94a3b8;
+    --theme-border: #334155;
+    --theme-radius: 10px;
+}
+
+
+/* =========================
+   OCEAN
+========================= */
+
+.builder[data-theme="ocean"] {
+    --theme-primary: #0284c7;
+    --theme-primary-dark: #0369a1;
+    --theme-background: #f0f9ff;
+    --theme-surface: #ffffff;
+    --theme-input-background: #ffffff;
+    --theme-text: #0c4a6e;
+    --theme-muted: #64748b;
+    --theme-border: #bae6fd;
+    --theme-radius: 12px;
+}
+
+
+/* =========================
+   EMERALD
+========================= */
+
+.builder[data-theme="emerald"] {
+    --theme-primary: #059669;
+    --theme-primary-dark: #047857;
+    --theme-background: #f0fdf4;
+    --theme-surface: #ffffff;
+    --theme-input-background: #ffffff;
+    --theme-text: #064e3b;
+    --theme-muted: #64748b;
+    --theme-border: #bbf7d0;
+    --theme-radius: 12px;
+}
+
+
+/* =========================
+   ROYAL
+========================= */
+
+.builder[data-theme="royal"] {
+    --theme-primary: #7c3aed;
+    --theme-primary-dark: #6d28d9;
+    --theme-background: #faf5ff;
+    --theme-surface: #ffffff;
+    --theme-input-background: #ffffff;
+    --theme-text: #3b0764;
+    --theme-muted: #6b7280;
+    --theme-border: #ddd6fe;
+    --theme-radius: 12px;
+}
+
+
+/* =========================
+   ROSE
+========================= */
+
+.builder[data-theme="rose"] {
+    --theme-primary: #e11d48;
+    --theme-primary-dark: #be123c;
+    --theme-background: #fff1f2;
+    --theme-surface: #ffffff;
+    --theme-input-background: #ffffff;
+    --theme-text: #4c0519;
+    --theme-muted: #6b7280;
+    --theme-border: #fecdd3;
+    --theme-radius: 12px;
+}
+/* =====================================================
+   STEP 2 — APPLY THEME TO FORM BUILDER
+===================================================== */
+
+/* Builder background */
+.builder {
+    background: var(--theme-background);
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Builder heading */
+.builder-header h2 {
+    color: var(--theme-primary);
+    transition: color 0.3s ease;
+}
+
+.builder-header p {
+    color: var(--theme-muted);
+}
+
+
+/* Drop zone */
+.drop-zone {
+    background: var(--theme-surface);
+    border-color: var(--theme-primary);
+    border-radius: var(--theme-radius);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Drop zone while dragging */
+.drop-zone.drag-over {
+    background: var(--theme-background);
+    border-color: var(--theme-primary-dark);
+}
+
+
+/* Placeholder */
+.placeholder {
+    color: var(--theme-muted);
+}
+
+.placeholder i {
+    color: var(--theme-primary);
+}
+
+.placeholder h3 {
+    color: var(--theme-primary);
+}
+
+
+/* Form field cards */
+.form-field {
+    background: var(--theme-surface);
+    border-color: transparent;
+    border-radius: var(--theme-radius);
+
+    color: var(--theme-text);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Field hover */
+.form-field:hover {
+    border-color: var(--theme-primary);
+}
+
+
+/* Selected field */
+.form-field.selected {
+    border-color: var(--theme-primary);
+    box-shadow:
+        0 0 0 4px color-mix(
+            in srgb,
+            var(--theme-primary) 15%,
+            transparent
+        );
+}
+
+
+/* Field title */
+.field-title {
+    color: var(--theme-primary);
+}
+
+
+/* Field labels */
+.form-field label {
+    color: var(--theme-text);
+}
+
+
+/* Inputs inside form */
+.form-field input,
+.form-field textarea,
+.form-field select {
+    background: var(--theme-input-background);
+    border-color: var(--theme-border);
+    color: var(--theme-text);
+
+    border-radius: var(--theme-radius);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Input focus */
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+    border-color: var(--theme-primary);
+
+    box-shadow:
+        0 0 0 3px color-mix(
+            in srgb,
+            var(--theme-primary) 15%,
+            transparent
+        );
+}
+
+
+/* Field action buttons */
+.field-actions button {
+    background: var(--theme-background);
+}
+
+.field-actions button:hover {
+    background: var(--theme-border);
+}
+
+.field-actions i {
+    color: var(--theme-primary);
+}
+
+
+/* Field toolbar */
+.field-toolbar button:hover {
+    background: var(--theme-background);
+}
+
+.field-toolbar i {
+    color: var(--theme-primary);
+}
+/* =====================================================
+   THEME SELECTOR
+===================================================== */
+
+.builder-header {
+    position: relative;
+}
+
+
+/* =====================================================
+   THEME MENU
+===================================================== */
+
+.theme-menu {
+    position: absolute;
+
+    top: 58px;
+    right: 0;
+
+    width: 320px;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, 0.16),
+        0 5px 15px rgba(15, 23, 42, 0.08);
+
+    display: none;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7px;
+
+    z-index: 5000;
+
+    max-height: 430px;
+
+    overflow-y: auto;
+}
+
+
+/* OPEN */
+
+.theme-menu.show {
+    display: grid;
+
+    animation: themeMenuOpen 0.2s ease;
+}
+
+
+/* =====================================================
+   MENU ANIMATION
+===================================================== */
+
+@keyframes themeMenuOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   THEME OPTION
+===================================================== */
+
+.theme-option {
+
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px;
+
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #1e293b;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* HOVER */
+
+.theme-option:hover {
+
+    background: #f8fafc;
+
+    border-color: #dbeafe;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ACTIVE */
+
+.theme-option.active {
+
+    background: #eff6ff;
+
+    border-color: #2563eb;
+
+}
+
+
+/* =====================================================
+   THEME PREVIEW
+===================================================== */
+
+.theme-preview {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.4),
+        0 2px 5px rgba(0,0,0,0.08);
+}
+
+
+/* =====================================================
+   THEME PREVIEWS
+===================================================== */
+
+.professional-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #60a5fa,
+            #eff6ff
+        );
+
+}
+
+
+.midnight-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #020617,
+            #0f172a,
+            #334155
+        );
+
+}
+
+
+.ocean-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0369a1,
+            #0ea5e9,
+            #e0f2fe
+        );
+
+}
+
+
+.emerald-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #047857,
+            #10b981,
+            #d1fae5
+        );
+
+}
+
+
+.royal-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b21b6,
+            #7c3aed,
+            #ede9fe
+        );
+
+}
+
+
+.rose-preview {
+
+    background:
+        linear-gradient(
+            135deg,
+            #be123c,
+            #e11d48,
+            #ffe4e6
+        );
+
+}
+
+
+/* =====================================================
+   THEME TEXT
+===================================================== */
+
+.theme-option strong {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #1e293b;
+
+}
+
+
+.theme-option small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    color: #64748b;
+
+}
+
+
+/* =====================================================
+   THEME MENU SCROLLBAR
+===================================================== */
+
+.theme-menu::-webkit-scrollbar {
+
+    width: 5px;
+
+}
+
+
+.theme-menu::-webkit-scrollbar-thumb {
+
+    background: #cbd5e1;
+
+    border-radius: 10px;
+
+}
+
+
+/* =====================================================
+   ACTIVE CHECK MARK
+===================================================== */
+
+.theme-option.active::after {
+
+    content: "\f00c";
+
+    margin-left: auto;
+
+    font-family: "Font Awesome 6 Free";
+
+    font-weight: 900;
+
+    font-size: 12px;
+
+    color: #2563eb;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px) {
+
+    .theme-menu {
+
+        width: 290px;
+
+        grid-template-columns: 1fr;
+
+        right: -5px;
+
+    }
+
+}
+/* ==========================================
+   FORM BUILDER HEADER ACTIONS
+========================================== */
+
+.builder-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-left: auto;
+}
+
+/* ==========================================
+   FORMAI BUTTON - THEME MATCHING
+========================================== */
+
+.form-ai-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--theme-primary);
+    border-radius: 10px;
+
+    background: var(--theme-primary);
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all .25s ease;
+
+    margin-left: 0;
+
+    box-shadow: 0 3px 8px color-mix(
+        in srgb,
+        var(--theme-primary) 25%,
+        transparent
+    );
+}
+
+.form-ai-btn:hover{
+    background: var(--theme-primary-dark);
+    border-color: var(--theme-primary-dark);
+
+    transform: translateY(-1px);
+}
+
+.form-ai-btn i{
+    font-size: 13px;
+}
+/* ==========================================
+   FORMAI SIDE PANEL
+========================================== */
+
+.form-ai-panel {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 360px;
+    height: 100vh;
+
+    background: #ffffff;
+
+    border-left: 1px solid #e2e8f0;
+
+    box-shadow: -15px 0 45px rgba(15, 23, 42, 0.15);
+
+    z-index: 6000;
+
+    display: flex;
+    flex-direction: column;
+
+    transform: translateX(100%);
+
+    transition: transform 0.3s ease;
+
+}
+
+/* Open Panel */
+
+.form-ai-panel.open {
+
+    transform: translateX(0);
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.form-ai-header {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+.form-ai-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.form-ai-icon {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+}
+
+.form-ai-title h3 {
+
+    margin: 0;
+
+    font-size: 17px;
+
+    color: #1e293b;
+
+}
+
+.form-ai-title span {
+
+    font-size: 11px;
+
+    color: #64748b;
+
+}
+
+
+/* Close Button */
+
+.close-form-ai {
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.close-form-ai:hover {
+
+    background: #fee2e2;
+
+    color: #ef4444;
+
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.form-ai-content {
+
+    flex: 1;
+
+    padding: 22px;
+
+    overflow-y: auto;
+
+}
+
+.form-ai-welcome {
+
+    text-align: center;
+
+    padding: 20px 10px;
+
+}
+
+.form-ai-welcome-icon {
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    border-radius: 18px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 26px;
+
+}
+
+.form-ai-welcome h3 {
+
+    margin-bottom: 8px;
+
+    color: #1e293b;
+
+}
+
+.form-ai-welcome p {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.form-ai-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+}
+
+.form-ai-action {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.form-ai-action:hover {
+
+    background: #eff6ff;
+
+    border-color: #bfdbfe;
+
+    color: #2563eb;
+
+}
+
+.form-ai-action i {
+
+    width: 30px;
+
+    color: #2563eb;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   CHAT INPUT
+========================================== */
+
+.form-ai-input-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    border-top: 1px solid #e5e7eb;
+
+    background: #ffffff;
+
+}
+
+.form-ai-input-area input {
+
+    flex: 1;
+
+    height: 44px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dbe3ef;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 13px;
+
+}
+
+.form-ai-input-area input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+
+}
+
+#sendFormAI {
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+#sendFormAI:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .form-ai-panel {
+
+        width: 100%;
+
+    }
+
+}
+/* ==========================================
+   FORMAI CHAT MESSAGES
+========================================== */
+
+.form-ai-message {
+
+    display: flex;
+
+    margin-bottom: 12px;
+
+}
+
+.form-ai-message.user {
+
+    justify-content: flex-end;
+
+}
+
+.form-ai-message.ai {
+
+    justify-content: flex-start;
+
+}
+
+.form-ai-message-text {
+
+    max-width: 85%;
+
+    padding: 11px 14px;
+
+    border-radius: 14px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+.form-ai-message.user .form-ai-message-text {
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    border-bottom-right-radius: 4px;
+
+}
+
+.form-ai-message.ai .form-ai-message-text {
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    border-bottom-left-radius: 4px;
+
+}
+/* ==========================================
+   FORMAI RICH UI ELEMENTS
+========================================== */
+
+.ai-score-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.ai-score-badge.high { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+.ai-score-badge.medium { background: #fef3c7; color: #b45309; border: 1px solid #fde047; }
+.ai-score-badge.low { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+
+.ai-section-box {
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.ai-audit-list {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0 0;
+}
+
+.ai-audit-list li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #334155;
+}
+
+.ai-audit-list li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.ai-suggest-card {
+    background: #ffffff;
+    border: 1px solid #e9d5ff;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ai-suggest-card strong {
+    display: block;
+    font-size: 12px;
+    color: #1e293b;
+}
+
+.ai-suggest-card small {
+    display: block;
+    font-size: 10px;
+    color: #64748b;
+}
+
+.ai-add-field-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.ai-add-field-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.03);
+}
+/* ==========================================
+   ADD PAGE BUTTON & MULTI-PAGE CANVAS STYLES
+========================================== */
+
+.add-page-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border: 1px solid #10b981;
+    border-radius: 8px;
+    background: #10b981;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(16, 185, 129, 0.2);
+}
+
+.add-page-btn:hover {
+    background: #059669;
+    border-color: #059669;
+    transform: translateY(-1px);
+}
+
+/* Page Card Container */
+.form-page-card {
+    background: #ffffff;
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.form-page-card.drag-over {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.page-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.page-card-header h3 {
+    font-size: 15px;
+    color: #2563eb;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-page-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #ef4444;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-page-btn:hover {
+    background: #fca5a5;
+    color: #991b1b;
+}
+
+.page-drop-zone {
+    min-height: 120px;
+    padding: 10px;
+}
+
+/* Page Footer Submit & Next Buttons */
+.page-card-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-form-btn-canvas {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.next-page-btn-canvas {
+    padding: 10px 20px;
+    border: 1px solid #2563eb;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

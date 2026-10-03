@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Forms | Smart Forms</title>
+
+    <link rel="stylesheet" href="css/myforms.css">
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+                    SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <!-- LOGO -->
+
+    <a href="home.html" class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-layer-group"></i>
+        </div>
+
+        <div class="logo-text">
+            <h2>Smart Forms</h2>
+            <span>FORM BUILDER</span>
+        </div>
+
+    </a>
+
+
+    <!-- MAIN NAVIGATION -->
+
+    <div class="menu-section">
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <ul class="menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+
+            <li class="active">
+
+                <a href="myforms.html">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <span>My Forms</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="create-form.html">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>Create Form</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                    <span>Templates</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <span>Themes</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="analytics.html">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>Analytics</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="responses.html">
+
+                    <i class="fa-solid fa-square-poll-horizontal"></i>
+
+                    <span>Responses</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="sharedforms.html">
+
+                    <i class="fa-solid fa-share-nodes"></i>
+
+                    <span>Shared Forms</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- MANAGEMENT -->
+
+    <div class="menu-section management">
+
+        <p class="menu-title">MANAGEMENT</p>
+
+        <ul class="menu">
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    <span>Trash</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+        <div class="help-box">
+
+            <div class="help-icon">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Need help?</strong>
+
+                <span>Explore Smart Forms</span>
+
+            </div>
+
+        </div>
+
+
+        <a href="login.html" class="logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+                    MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="top-header">
+
+        <div class="header-left">
+
+            <div class="page-title">
+
+                <span class="eyebrow">
+                    FORM MANAGEMENT
+                </span>
+
+                <h1>My Forms</h1>
+
+                <p>
+                    Create, manage and track all your forms in one place.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <button class="icon-button"
+                    title="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="user-profile">
+
+                <div class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="user-info">
+
+                    <strong>My Workspace</strong>
+
+                    <span>Form Manager</span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+                        ACTION BAR
+    ================================================== -->
+
+    <section class="action-bar">
+
+        <div>
+
+            <h2>Your Forms</h2>
+
+            <p>
+                Manage everything you've created.
+            </p>
+
+        </div>
+
+
+        <a href="create-choice.html"
+           class="create-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            <span>Create New Form</span>
+
+        </a>
+
+    </section>
+
+
+    <!-- =================================================
+                        STATISTICS
+    ================================================== -->
+
+    <section class="stats-grid">
+
+
+        <!-- TOTAL FORMS -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-label">
+                    TOTAL FORMS
+                </span>
+
+                <h2 id="totalForms">0</h2>
+
+                <p>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    Your created forms
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACTIVE FORMS -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-label">
+                    ACTIVE FORMS
+                </span>
+
+                <h2 id="activeForms">0</h2>
+
+                <p>
+                    <i class="fa-solid fa-bolt"></i>
+                    Currently available
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESPONSES -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-label">
+                    TOTAL RESPONSES
+                </span>
+
+                <h2 id="totalResponses">0</h2>
+
+                <p>
+                    <i class="fa-solid fa-chart-line"></i>
+                    Responses collected
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+                        FORMS SECTION
+    ================================================== -->
+
+    <section class="forms-section">
+
+
+        <!-- SECTION HEADER -->
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>All Forms</h2>
+
+                <p id="formCount">
+                    Loading your forms...
+                </p>
+
+            </div>
+
+
+            <div class="view-controls">
+
+                <button class="view-btn active"
+                        id="gridViewBtn"
+                        title="Grid View">
+
+                    <i class="fa-solid fa-grip"></i>
+
+                </button>
+
+                <button class="view-btn"
+                        id="listViewBtn"
+                        title="List View">
+
+                    <i class="fa-solid fa-list"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOOLBAR -->
+
+        <div class="toolbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search forms by name...">
+
+                <kbd>⌘ K</kbd>
+
+            </div>
+
+
+            <div class="filter-area">
+
+                <label for="filter">
+                    Sort by
+                </label>
+
+                <select id="filter">
+
+                    <option value="all">
+                        All Forms
+                    </option>
+
+                    <option value="recent">
+                        Recently Created
+                    </option>
+
+                    <option value="responses">
+                        Most Responses
+                    </option>
+
+                    <option value="name">
+                        Name A–Z
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMS GRID -->
+
+        <div
+            id="formsContainer"
+            class="forms-grid">
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+                        FOOTER
+    ================================================== -->
+
+    <footer class="page-footer">
+
+        <span>
+            © 2026 Smart Forms
+        </span>
+
+        <span>
+            Create • Collect • Analyze
+        </span>
+
+    </footer>
+
+</main>
+
+
+<!-- =====================================================
+                        JAVASCRIPT
+===================================================== -->
+
+<script src="js/myforms.js"></script>
+
+</body>
+
+</html>

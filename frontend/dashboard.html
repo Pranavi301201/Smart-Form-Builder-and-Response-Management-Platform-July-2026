@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Smart Forms</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+                    SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <!-- Logo -->
+
+    <a href="home.html" class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-layer-group"></i>
+        </div>
+
+        <div class="logo-text">
+            <h2>Smart Forms</h2>
+            <span>Form Management</span>
+        </div>
+
+    </a>
+
+
+    <!-- Main Navigation -->
+
+    <div class="menu-section">
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <ul class="menu">
+
+            <li class="active">
+
+                <a href="dashboard.html">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="myforms.html">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span>My Forms</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="create-form.html">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                    <span>Create Form</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="templates.html">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-copy"></i>
+                    </span>
+
+                    <span>Templates</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </span>
+
+                    <span>Themes</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="analytics.html">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </span>
+
+                    <span>Analytics</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="responses.html">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-square-poll-horizontal"></i>
+                    </span>
+
+                    <span>Responses</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </span>
+
+                    <span>Shared Forms</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+
+                    <span>Trash</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Bottom Menu -->
+
+    <div class="menu-section bottom-menu">
+
+        <p class="menu-title">ACCOUNT</p>
+
+        <ul class="menu">
+
+            <li>
+
+                <a href="#">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </li>
+
+
+            <li class="logout">
+
+                <a href="login.html">
+
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Sidebar Footer -->
+
+    <div class="sidebar-footer">
+
+        <div class="help-icon">
+
+            <i class="fa-solid fa-circle-question"></i>
+
+        </div>
+
+        <div>
+
+            <strong>Need help?</strong>
+
+            <span>Contact support</span>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+                    MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+                        TOP BAR
+    ================================================= -->
+
+    <header class="topbar">
+
+        <div class="mobile-menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="dashboardSearch"
+                placeholder="Search forms..."
+            >
+
+            <span class="search-shortcut">⌘ K</span>
+
+        </div>
+
+
+        <!-- Right Side -->
+
+        <div class="topbar-right">
+
+            <button class="icon-button"
+                    title="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="topbar-divider"></div>
+
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    P
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>Pranavi</strong>
+
+                    <span>Administrator</span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+                    DASHBOARD BODY
+    ================================================= -->
+
+    <section class="dashboard-body">
+
+
+        <!-- =============================================
+                    WELCOME SECTION
+        ============================================= -->
+
+        <div class="welcome-section">
+
+            <div>
+
+                <span class="welcome-label">
+                    <i class="fa-solid fa-sparkles"></i>
+                    Dashboard Overview
+                </span>
+
+                <h1>
+                    Welcome back, Pranavi! 👋
+                </h1>
+
+                <p>
+                    Here's what's happening with your forms today.
+                    Create, manage and analyze everything from one place.
+                </p>
+
+            </div>
+
+
+            <a href="create-form.html"
+               class="create-button">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Create New Form
+
+            </a>
+
+        </div>
+
+
+        <!-- =============================================
+                    STATISTICS
+        ============================================= -->
+
+        <div class="stats-grid">
+
+
+            <!-- Total Forms -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-file-circle-plus"></i>
+                    </div>
+
+                    <span class="stat-label">
+                        TOTAL FORMS
+                    </span>
+
+                </div>
+
+                <div class="stat-bottom">
+
+                    <h2 id="totalForms">0</h2>
+
+                    <div class="stat-trend positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        <span>Active</span>
+
+                    </div>
+
+                </div>
+
+                <p class="stat-description">
+                    Forms created in your workspace
+                </p>
+
+            </div>
+
+
+            <!-- Responses -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <span class="stat-label">
+                        TOTAL RESPONSES
+                    </span>
+
+                </div>
+
+                <div class="stat-bottom">
+
+                    <h2 id="totalResponses">0</h2>
+
+                    <div class="stat-trend positive">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>Responses</span>
+
+                    </div>
+
+                </div>
+
+                <p class="stat-description">
+                    Responses collected from forms
+                </p>
+
+            </div>
+
+
+            <!-- Today's Responses -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+
+                    <span class="stat-label">
+                        TODAY'S RESPONSES
+                    </span>
+
+                </div>
+
+                <div class="stat-bottom">
+
+                    <h2 id="todayResponses">0</h2>
+
+                    <div class="stat-trend neutral">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>Today</span>
+
+                    </div>
+
+                </div>
+
+                <p class="stat-description">
+                    Responses received today
+                </p>
+
+            </div>
+
+
+            <!-- Views -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    <span class="stat-label">
+                        TOTAL VIEWS
+                    </span>
+
+                </div>
+
+                <div class="stat-bottom">
+
+                    <h2 id="totalViews">0</h2>
+
+                    <div class="stat-trend positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        <span>Views</span>
+
+                    </div>
+
+                </div>
+
+                <p class="stat-description">
+                    Total form page views
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+                    QUICK ACTIONS
+        ============================================= -->
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>Quick Actions</h2>
+
+                <p>
+                    Get things done faster
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-actions">
+
+
+            <a href="create-form.html"
+               class="action-card action-primary">
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+                <div class="action-content">
+
+                    <h3>Create Form</h3>
+
+                    <p>
+                        Build a new form from scratch
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+            </a>
+
+
+            <a href="templates.html"
+               class="action-card">
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                </div>
+
+                <div class="action-content">
+
+                    <h3>Use Template</h3>
+
+                    <p>
+                        Start with a ready-made template
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+            </a>
+
+
+            <a href="responses.html"
+               class="action-card">
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-square-poll-horizontal"></i>
+
+                </div>
+
+                <div class="action-content">
+
+                    <h3>View Responses</h3>
+
+                    <p>
+                        Check collected form responses
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+            </a>
+
+
+            <a href="analytics.html"
+               class="action-card">
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                </div>
+
+                <div class="action-content">
+
+                    <h3>Analytics</h3>
+
+                    <p>
+                        Analyze your form performance
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =============================================
+                    MAIN DASHBOARD GRID
+        ============================================= -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- =========================================
+                        RECENT FORMS
+            ========================================= -->
+
+            <div class="dashboard-panel forms-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>Recent Forms</h2>
+
+                        <p>Your latest created forms</p>
+
+                    </div>
+
+                    <a href="myforms.html"
+                       class="view-all">
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div id="recentForms"
+                     class="recent-forms">
+
+                    <!-- Loading -->
+
+                    <div class="loading-state">
+
+                        <div class="loading-spinner"></div>
+
+                        <span>Loading forms...</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                        RECENT ACTIVITY
+            ========================================= -->
+
+            <div class="dashboard-panel activity-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>Recent Activity</h2>
+
+                        <p>Latest updates</p>
+
+                    </div>
+
+                    <button class="more-button">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div id="activity"
+                     class="activity-list">
+
+                    <!-- JS -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+                    EMPTY / GET STARTED CARD
+        ============================================= -->
+
+        <div id="gettingStarted"
+             class="getting-started">
+
+            <div class="getting-started-icon">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            </div>
+
+            <div class="getting-started-content">
+
+                <span>GET STARTED</span>
+
+                <h2>Build your first smart form</h2>
+
+                <p>
+                    Create a professional form in minutes using
+                    our easy drag-and-drop form builder.
+                </p>
+
+            </div>
+
+            <a href="create-form.html"
+               class="getting-started-button">
+
+                Start Building
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<!-- Dashboard JavaScript -->
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

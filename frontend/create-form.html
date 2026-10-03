@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Form | Smart Form Builder</title>
+
+    <link rel="stylesheet" href="css/create-form.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+        SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <h2>Smart Forms</h2>
+
+    </div>
+
+    <ul class="menu">
+
+        <li>
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="myforms.html">
+                <i class="fa-solid fa-file-lines"></i>
+                My Forms
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="create-form.html">
+                <i class="fa-solid fa-plus"></i>
+                Create Form
+            </a>
+        </li>
+
+        <li>
+            <a href="templates.html">
+                <i class="fa-solid fa-copy"></i>
+                Templates
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-palette"></i>
+                Themes
+            </a>
+        </li>
+
+        <li>
+            <a href="analytics.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Analytics
+            </a>
+        </li>
+
+        <li>
+            <a href="responses.html">
+                <i class="fa-solid fa-square-poll-horizontal"></i>
+                Responses
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-share-nodes"></i>
+                Shared Forms
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-trash"></i>
+                Trash
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </li>
+
+        <li class="logout">
+            <a href="login.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- =========================
+        MAIN
+========================= -->
+
+<div class="main-content">
+
+    <!-- Top Bar -->
+
+    <div class="topbar">
+
+        <div>
+
+            <input
+id="formTitle"
+class="form-title"
+type="text"
+placeholder="Untitled Form"
+value="">
+        </div>
+
+        <div class="top-actions">
+
+            <button type="button" id="saveBtn">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save
+
+            </button>
+
+            <button id="previewBtn">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Preview
+
+            </button>
+
+            <button id="publishBtn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Publish
+
+            </button>
+           
+
+
+        </div>
+
+    </div>
+
+    <!-- Workspace -->
+
+    <div class="workspace">
+
+        <!-- ======================
+             LEFT PANEL
+        ======================= -->
+
+        <div class="components">
+
+            <div class="search-box">
+
+                <i class="fa fa-search"></i>
+
+                <input
+                type="text"
+                placeholder="Search Component">
+
+            </div>
+
+            <!-- Basic -->
+
+            <div class="group">
+
+                <h3>Basic Fields</h3>
+
+                <div class="field" draggable="true" data-type="Text Field">
+
+                    <i class="fa-solid fa-font"></i>
+
+                    Text Field
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Name">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Name
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Email
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Phone">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Phone
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Address">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Address
+
+                </div>
+
+            </div>
+
+            <!-- Numbers -->
+
+            <div class="group">
+
+                <h3>Numbers</h3>
+
+                <div class="field" draggable="true" data-type="Number">
+
+                    <i class="fa-solid fa-hashtag"></i>
+
+                    Number
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Decimal">
+
+                    <i class="fa-solid fa-percent"></i>
+
+                    Decimal
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Currency">
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    Currency
+
+                </div>
+
+            </div>
+
+            <!-- Choice -->
+
+            <div class="group">
+
+                <h3>Choice</h3>
+
+                <div class="field" draggable="true" data-type="Dropdown">
+
+                    <i class="fa-solid fa-caret-down"></i>
+
+                    Dropdown
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Radio">
+
+                    <i class="fa-regular fa-circle-dot"></i>
+
+                    Radio
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Checkbox">
+
+                    <i class="fa-regular fa-square-check"></i>
+
+                    Checkbox
+
+                </div>
+
+            </div>
+
+            <!-- Date -->
+
+            <div class="group">
+
+                <h3>Date & Time</h3>
+
+                <div class="field" draggable="true" data-type="Date">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    Date
+
+                </div>
+
+                <div class="field" draggable="true" data-type="Time">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Time
+
+                </div>
+
+                <div class="field" draggable="true" data-type="DateTime">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    Date Time
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================
+              FORM BUILDER
+        ======================= -->
+
+        <div class="builder">
+
+            <div class="builder-header">
+
+    <div>
+        <h2>Form Builder</h2>
+        <p>Drag components into the form.</p>
+    </div>
+
+
+     <button type="button" id="formAIBtn" class="form-ai-btn">
+        <i class="fa-solid fa-sparkles"></i>
+        FormAI
+    </button>
+    <!-- ==========================================
+     FORMAI SIDE PANEL
+========================================== -->
+
+<div id="formAIPanel" class="form-ai-panel">
+
+    <!-- Header -->
+    <div class="form-ai-header">
+
+        <div class="form-ai-title">
+            <div class="form-ai-icon">
+                <i class="fa-solid fa-sparkles"></i>
+            </div>
+
+            <div>
+                <h3>FormAI</h3>
+                <span>Your intelligent form assistant</span>
+            </div>
+        </div>
+
+        <button type="button"
+                id="closeFormAI"
+                class="close-form-ai">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <!-- Welcome Content -->
+<div class="form-ai-content" id="formAIChat">
+
+        <div class="form-ai-welcome">
+
+            <div class="form-ai-welcome-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+            <h3>Hi! I'm FormAI 👋</h3>
+
+            <p>
+                I can help you create and improve your form.
+                Ask me anything!
+            </p>
+
+        </div>
+
+
+        <!-- Quick Actions -->
+
+        <div class="form-ai-actions">
+
+            <button type="button" class="form-ai-action">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Generate a form
+            </button>
+
+            <button type="button" class="form-ai-action">
+                <i class="fa-solid fa-lightbulb"></i>
+                Suggest fields
+            </button>
+
+            <button type="button" class="form-ai-action">
+                <i class="fa-solid fa-pen-to-square"></i>
+                Improve my form
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Chat Input -->
+    <div class="form-ai-input-area">
+
+        <input
+            type="text"
+            id="formAIInput"
+            placeholder="Ask FormAI anything..."
+        >
+
+        <button type="button"
+                id="sendFormAI">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+    </div>
+
+</div> <!-- end of formAIPanel -->
+
+<!-- ==========================================
+     ADD PAGE BUTTON (ADDED HERE)
+========================================== -->
+<button type="button" id="addPageBtn" class="add-page-btn">
+    <i class="fa-solid fa-plus-circle"></i>
+    Add Page
+</button>
+
+<button type="button" id="themeBtn" class="theme-btn">
+    <i class="fa-solid fa-palette"></i>
+    Theme
+</button>
+<div id="themeMenu" class="theme-menu">
+
+    <!-- Professional -->
+    <button type="button" class="theme-option" data-theme="professional">
+        <span class="theme-preview professional-preview"></span>
+        <div>
+            <strong>Professional</strong>
+            <small>Clean & Corporate</small>
+        </div>
+    </button>
+
+    <!-- Midnight -->
+    <button type="button" class="theme-option" data-theme="midnight">
+        <span class="theme-preview midnight-preview"></span>
+        <div>
+            <strong>Midnight</strong>
+            <small>Premium Dark</small>
+        </div>
+    </button>
+
+    <!-- Ocean -->
+    <button type="button" class="theme-option" data-theme="ocean">
+        <span class="theme-preview ocean-preview"></span>
+        <div>
+            <strong>Ocean</strong>
+            <small>Fresh & Calm</small>
+        </div>
+    </button>
+
+    <!-- Emerald -->
+    <button type="button" class="theme-option" data-theme="emerald">
+        <span class="theme-preview emerald-preview"></span>
+        <div>
+            <strong>Emerald</strong>
+            <small>Natural & Modern</small>
+        </div>
+    </button>
+
+    <!-- Royal -->
+    <button type="button" class="theme-option" data-theme="royal">
+        <span class="theme-preview royal-preview"></span>
+        <div>
+            <strong>Royal</strong>
+            <small>Elegant Purple</small>
+        </div>
+    </button>
+
+    <!-- Rose -->
+    <button type="button" class="theme-option" data-theme="rose">
+        <span class="theme-preview rose-preview"></span>
+        <div>
+            <strong>Rose</strong>
+            <small>Soft & Elegant</small>
+        </div>
+    </button>
+<!-- More / Customize -->
+<button type="button" class="theme-more" id="themeMoreBtn">
+    <span class="more-icon">
+        <i class="fa-solid fa-sliders"></i>
+    </span>
+
+    <div>
+        <strong>More</strong>
+        <small>Customize form design</small>
+    </div>
+
+    <i class="fa-solid fa-chevron-right more-arrow"></i>
+</button>
+</div>
+</div>
+<!-- =========================================
+     FORM DESIGN PANEL
+========================================= -->
+
+<div id="designPanel" class="design-panel">
+
+    <div class="design-panel-header">
+
+        <div>
+            <span class="design-eyebrow">
+                FORM DESIGN
+            </span>
+
+            <h2>
+                Customize
+            </h2>
+
+            <p>
+                Make your form look exactly the way you want.
+            </p>
+        </div>
+
+        <button type="button" id="closeDesignPanel" class="close-design">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <!-- ===============================
+         APPEARANCE
+    ================================ -->
+
+    <div class="design-section">
+
+        <div class="design-section-title">
+
+            <i class="fa-solid fa-paintbrush"></i>
+
+            <div>
+                <strong>Appearance</strong>
+                <span>Control the overall look</span>
+            </div>
+
+        </div>
+
+
+        <!-- Accent Color -->
+
+        <div class="design-control">
+
+            <label>Accent Color</label>
+
+            <div class="color-control">
+
+                <input
+                    type="color"
+                    id="designAccentColor"
+                    value="#2563eb"
+                >
+
+                <input
+                    type="text"
+                    id="designAccentText"
+                    value="#2563eb"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Background -->
+
+        <div class="design-control">
+
+            <label>Form Background</label>
+
+            <div class="color-control">
+
+                <input
+                    type="color"
+                    id="designBackground"
+                    value="#f5f8fc"
+                >
+
+                <input
+                    type="text"
+                    id="designBackgroundText"
+                    value="#f5f8fc"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Text Color -->
+
+        <div class="design-control">
+
+            <label>Text Color</label>
+
+            <div class="color-control">
+
+                <input
+                    type="color"
+                    id="designTextColor"
+                    value="#374151"
+                >
+
+                <input
+                    type="text"
+                    id="designTextText"
+                    value="#374151"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===============================
+         TYPOGRAPHY
+    ================================ -->
+
+    <div class="design-section">
+
+        <div class="design-section-title">
+
+            <i class="fa-solid fa-font"></i>
+
+            <div>
+                <strong>Typography</strong>
+                <span>Choose your form font</span>
+            </div>
+
+        </div>
+
+
+        <div class="design-control">
+
+            <label>Font Family</label>
+
+            <select id="designFont">
+
+                <option value="Poppins">
+                    Poppins
+                </option>
+
+                <option value="Inter">
+                    Inter
+                </option>
+
+                <option value="Arial">
+                    Arial
+                </option>
+
+                <option value="Roboto">
+                    Roboto
+                </option>
+
+                <option value="Georgia">
+                    Georgia
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="design-control">
+
+            <label>Font Size</label>
+
+            <select id="designFontSize">
+
+                <option value="14px">Small</option>
+                <option value="15px" selected>Medium</option>
+                <option value="16px">Large</option>
+                <option value="18px">Extra Large</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===============================
+         FORM STYLE
+    ================================ -->
+
+    <div class="design-section">
+
+        <div class="design-section-title">
+
+            <i class="fa-solid fa-border-all"></i>
+
+            <div>
+                <strong>Form Style</strong>
+                <span>Adjust field appearance</span>
+            </div>
+
+        </div>
+
+
+        <!-- Border Radius -->
+
+        <div class="design-control">
+
+            <label>Corner Radius</label>
+
+            <input
+                type="range"
+                id="designRadius"
+                min="0"
+                max="24"
+                value="14"
+            >
+
+            <div class="range-values">
+                <span>Square</span>
+                <span id="radiusValue">14px</span>
+                <span>Rounded</span>
+            </div>
+
+        </div>
+
+
+        <!-- Shadow -->
+
+        <div class="design-control">
+
+            <label>Field Shadow</label>
+
+            <select id="designShadow">
+
+                <option value="none">
+                    None
+                </option>
+
+                <option value="soft" selected>
+                    Soft
+                </option>
+
+                <option value="medium">
+                    Medium
+                </option>
+
+                <option value="strong">
+                    Strong
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===============================
+         LAYOUT
+    ================================ -->
+
+    <div class="design-section">
+
+        <div class="design-section-title">
+
+            <i class="fa-solid fa-table-columns"></i>
+
+            <div>
+                <strong>Layout</strong>
+                <span>Control form spacing</span>
+            </div>
+
+        </div>
+
+
+        <div class="design-control">
+
+            <label>Form Width</label>
+
+            <select id="designWidth">
+
+                <option value="700px">
+                    Compact
+                </option>
+
+                <option value="850px" selected>
+                    Standard
+                </option>
+
+                <option value="1000px">
+                    Wide
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="design-control">
+
+            <label>Field Spacing</label>
+
+            <select id="designSpacing">
+
+                <option value="10px">
+                    Compact
+                </option>
+
+                <option value="20px" selected>
+                    Comfortable
+                </option>
+
+                <option value="30px">
+                    Spacious
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===============================
+         RESET
+    ================================ -->
+
+    <div class="design-panel-footer">
+
+        <button
+            type="button"
+            id="resetDesignBtn"
+            class="reset-design"
+        >
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            Reset Design
+
+        </button>
+
+    </div>
+
+</div>
+            <div id="dropZone" class="drop-zone">
+
+                <div class="placeholder">
+
+                    <i class="fa-solid fa-hand-pointer"></i>
+
+                    <h3>Drag Fields Here</h3>
+
+                    <p>Build your form visually.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================
+           PROPERTIES PANEL
+        ======================= -->
+
+        <div class="properties">
+
+            <h2>
+
+                <i class="fa-solid fa-sliders"></i>
+
+                Properties
+
+            </h2>
+
+            <hr>
+
+            <p id="noSelection">
+
+                Select a field to edit its properties.
+
+            </p>
+
+            <div id="propertyContent" style="display:none;">
+
+                 <label>Field Label</label>
+    <input type="text" id="propLabel">
+
+    <div id="placeholderSection">
+
+        <label>Placeholder</label>
+
+        <input type="text" id="propPlaceholder">
+
+    </div>
+     <div id="choiceSection" style="display:none;">
+
+        <label>Options</label>
+
+        <div id="choiceList"></div>
+
+        <button type="button" id="addChoiceBtn">
+            + Add Option
+        </button>
+
+    </div>
+
+        <label>
+<input
+type="checkbox"
+id="propRequired">
+
+Required
+</label>
+
+
+
+                <label>
+
+                    <input
+                    type="checkbox"
+                    id="readonlyField">
+
+                    Read Only
+
+                </label>
+
+                <hr>
+
+                <h3>Validation</h3>
+
+                <select id="validation">
+
+                    <option>None</option>
+
+                    <option>Email</option>
+
+                    <option>Phone</option>
+
+                    <option>Number</option>
+
+                </select>
+               <hr>
+
+
+
+<hr>
+
+<h3>
+    <i class="fa-solid fa-code-branch"></i>
+    Conditional Logic
+</h3>
+
+<label>IF Field</label>
+<select id="conditionField">
+    <option value="">Select Field</option>
+</select>
+
+<label>Operator</label>
+<select id="conditionOperator">
+
+    <option value="equals">Equals</option>
+    <option value="not_equals">Not Equals</option>
+    <option value="contains">Contains</option>
+    <option value="starts_with">Starts With</option>
+    <option value="ends_with">Ends With</option>
+    <option value="greater_than">Greater Than</option>
+    <option value="less_than">Less Than</option>
+    <option value="is_empty">Is Empty</option>
+    <option value="is_not_empty">Is Not Empty</option>
+
+</select>
+
+<label>Value</label>
+
+<input
+type="text"
+id="conditionValue"
+placeholder="Comparison value">
+
+<hr>
+
+<label>THEN Action</label>
+
+<select id="actionType">
+
+    <option value="show">Show Field</option>
+    <option value="hide">Hide Field</option>
+    <option value="require">Make Required</option>
+    <option value="optional">Make Optional</option>
+    <option value="enable">Enable Field</option>
+    <option value="disable">Disable Field</option>
+
+</select>
+
+<label>Target Field</label>
+
+<select id="targetField">
+    <option value="">Select Field</option>
+</select>
+
+<button
+type="button"
+id="saveConditionBtn">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Rule
+
+</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/create-form.js"></script>
+
+</body>
+
+</html>
